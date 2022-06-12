@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/slider.min.css">
+    <link rel="stylesheet" href="CSS/Index.css">
+    <script defer src="JS/slider.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            new ItcSimpleSlider('#blog_slider', {
+                loop: true,
+                autoplay: false,
+                interval: 5000,
+                swipe: true,
+            });
+        });
+        document.addEventListener('DOMContentLoaded', () => {
+            new ItcSimpleSlider('#quotes_slider', {
+                loop: true,
+                autoplay: false,
+                interval: 5000,
+                swipe: true,
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="logo"><img src="Images/logo.svg" alt="" class="logo"></div>
+        <nav class="navigation_links">
+            <a href="/" class="nav_link">Home</a>
+            <a href="blog" class="nav_link">Blog</a>
+            <a href="features" class="nav_link">Features</a>
+            <a href="pricing" class="nav_link">Pricing</a>
+            <a href="documentation" class="nav_link">Documentation</a>
+        </nav>
+        <div class="socials">
+            <a class="social"><img src="Images/socials/facebook.svg" alt="facebook logo" class="social_img"></a>
+            <a class="social"><img src="Images/socials/telegram.svg" alt="telegram logo" class="social_img"></a>
+            <a class="social"><img src="Images/socials/twitter.svg" alt="twitter logo" class="social_img"></a>
+            <a class="social"><img src="Images/socials/m.svg" alt="m logo" class="social_img"></a>
+        </div>
+        <button class="header_btn">Get started</button>
+    </header>
+    <main>
+        <div class="plan_your_life">
+            <div class="plan_your_life_text_block">
+                <p class="plan_your_life_p">PLAN YOUR LIFE</p>
+                <h1>Increase your <b>productivity</b></h1>
+                <p class="plan_your_life_p">Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu atqui laudem an, insolens gubergren similique est cu. Et vel modus congue vituperata.</p>
+                <img src="Images/plan_your_life/play_button.svg" alt="play button" class="play_btn">
+                <img src="Images/plan_your_life/button.svg" alt="some button" class="hero_image_btn">
+            </div>
+        </div>
+        <div class="company_logos">
+            <img src="Images/plan_your_life/companies_logo/bitbacket.svg" alt="bitbacket logo" class="company_logo">
+            <img src="Images/plan_your_life/companies_logo/apple.svg" alt="apple logo" class="company_logo">
+            <img src="Images/plan_your_life/companies_logo/facebook.svg" alt="facebook logo" class="company_logo">
+            <img src="Images/plan_your_life/companies_logo/atlassian.svg" alt="atlassian logo" class="company_logo">
+            <img src="Images/plan_your_life/companies_logo/audi.svg" alt="audi logo" class="company_logo">
+        </div>
+        <div class="desktop_and_mobile_apps_block">
+            <div class="desktop_and_mobile_apps">
+                <div class="desktop_and_mobile_apps_text_block">
+                    <p><b>DESKTOP AND MOBILE APP</b></p>
+                    <h2><b>Plan</b> and <b>manage</b></h2>
+                    <p>Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu atqui laudem an, insolens gubergren similique est cu. Et vel modus congue vituperata. Solum patrioque no sea. Mea ex malis mollis oporteat. Eum an expetenda consequat.</p>
+                    <div class="desktop_and_mobile_app_btn_block">
+                        <button class="desktop_and_mobile_app_btn view_video_btn">View video &nbsp;<img src="Images/desktop_and_mobile/play_arrow.svg" alt=""></button>
+                        <button class="desktop_and_mobile_app_btn">See features</button>
+                    </div>
+                </div>
+                <img src="Images/desktop_and_mobile/illustration.png" alt="desktop and mobile apps illustration" class="desktop_and_mobile_apps_img">
+            </div>
+        </div>
+        <div class="about_app_block">
+            <div class="about_app">
+                <div class="about_app_header">
+                    <p>ABOUT US</p>
+                    <h3>Read about our app</h3>
+                </div>
+                <div class="about_app_branches">
+                    <div class="about_app_brench">
+                        <img src="Images/about_app/home.svg" alt="" class="about_app_brench_img">
+                        <h4>Overview</h4>
+                        <p>Brute laoreet efficiendi id his, ea illum nonumes luptatum pro.</p>
+                    </div>
+                    <div class="about_app_brench">
+                        <img src="Images/about_app/file.svg" alt="" class="about_app_brench_img">
+                        <h4>Files</h4>
+                        <p>No vim nulla vitae intellegat. Ei enim error ius, solet atomorum conceptam ex has.</p>
+                    </div>
+                    <div class="about_app_brench">
+                        <img src="Images/about_app/message.svg" alt="" class="about_app_brench_img">
+                        <h4>Meeting chats</h4>
+                        <p>Vim ne tacimates neglegentur. Erat diceret omittam at est.</p>
+                    </div>
+                    <div class="about_app_brench">
+                        <img src="Images/about_app/save.svg" alt="" class="about_app_brench_img">
+                        <h4>Save events</h4>
+                        <p>Nisl idque mel ea, nominati voluptatum.</p>
+                    </div>
+                </div>
+                <div class="about_app_btn_block">
+                    <button class="about_app_btn read_more_btn">Read more</button>
+                    <p class="about_app_btn_text">&mdash; &nbsp;&nbsp;&nbsp;OR&nbsp;&nbsp;&nbsp; &mdash;</p>
+                    <button class="about_app_btn get_started_btn">Get started</button>
+                </div>
+            </div>
+        </div>
+        <div class="users_statistics">
+            <div class="customers_increased">
+                <div class="customers_increased_content">
+                    <img src="Images/users_statistics/productivity.svg" alt="Productivity image" class="statistics_image">
+                    <h3>89%</h3>
+                    <p>Customers who have increased their productivity</p>
+                </div>
+            </div>
+            <div class="users_applications">
+                <div class="users_applications_content">
+                    <img src="Images/users_statistics/people.svg" alt="People image" class="statistics_image">
+                    <h3>3123</h3>
+                    <p>Users who have used our application</p>
+                </div>
+            </div>
+        </div>
+        <div class="blog">
+            <div class="blog_header">
+                <p>OUR RESOURCES</p>
+                <h3>Start reading our blog</h3>
+            </div>
+            <div class="blog_content">
+                <div class="itcss" id="blog_slider">
+                    <div class="itcss__wrapper">
+                        <div class="itcss__items">
+                            <div class="itcss__item">
+                                <img src="Images/blog/illustrations.png" alt="blog illustrations" class="slider_item_image">
+                                <div class="slider_item_text">
+                                    <h3 class="blog_item_header">How to start planning</h3>
+                                    <p>Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti. Natum petentium principes mei ea. Tota everti periculis vis ei, quas tibique pro
+                                        at, eos ut decore ...</p>
+                                    <button class="read_blog_btn">Read now</button>
+                                    <button class="add_to_bookmarks_btn">Add to your bookmarks</button>
+                                </div>
+                            </div>
+                            <div class="itcss__item">SOME TEXT</div>
+                            <div class="itcss__item">FOR test</div>
+                        </div>
+                    </div>
+                    <a class="itcss__control itcss__control_prev" href="#" role="button" data-slide="prev"></a>
+                    <a class="itcss__control itcss__control_next" href="#" role="button" data-slide="next"></a>
+                </div>
+            </div>
+        </div>
+        <div class="quotes">
+            <div class="quotes_text">
+                <h4 class="quotes_h4">TESTIMONIALS</h4>
+                <h2 class="quotes_header">Customers`s quotes</h2>
+                <p>Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu atqui laudem an.</p>
+            </div>
+            <div class="quotes_slider" id="quotes_slider">
+                <div class="itcss__wrapper quotes_slider_wrapper">
+                    <div class="itcss__items">
+                        <div class="itcss__item quotes_slider_item">
+                            <div class="customers_quote_block">
+                                <p class="customers_quote">Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.</p>
+                                <img src="Images/customers_avatars/avatar1.png" alt="avatar" class="customers_avatar">
+                            </div>
+                        </div>
+                        <div class="itcss__item quotes_slider_item">
+                            <div class="customers_quote_block">
+                                <p class="customers_quote">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam suscipit, ipsum at rutrum luctus, nunc lacus facilisis sapien, in posuere mauris velit et purus. Class aptent taciti sociosqu ad litora torquent per conubia
+                                    nostra, per inceptos himenaeos. Donec tincidunt porttitor turpis ut lobortis.</p>
+                                <img src="Images/customers_avatars/avatar_2.jpg" alt="avatar" class="customers_avatar">
+                            </div>
+                        </div>
+                        <div class="itcss__item quotes_slider_item">
+                            <div class="customers_quote_block">
+                                <p class="customers_quote">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam suscipit, ipsum at rutrum luctus, nunc lacus facilisis sapien, in posuere mauris velit et purus. Class aptent taciti sociosqu ad litora torquent per conubia
+                                    nostra, per inceptos himenaeos.</p>
+                                <img src="Images/customers_avatars/avatar_3.jpg" alt="avatar" class="customers_avatar">
+                            </div>
+                        </div>
+                        <div class="itcss__item quotes_slider_item">
+                            <div class="customers_quote_block">
+                                <p class="customers_quote">Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.</p>
+                                <img src="Images/customers_avatars/avatar1.png" alt="avatar" class="customers_avatar">
+                            </div>
+                        </div>
+                        <div class="itcss__item quotes_slider_item">
+                            <div class="customers_quote_block">
+                                <p class="customers_quote">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam suscipit, ipsum at rutrum luctus, nunc lacus facilisis sapien, in posuere mauris velit et purus. Class aptent taciti sociosqu ad litora torquent per conubia
+                                    nostra, per inceptos himenaeos. Donec tincidunt porttitor turpis ut lobortis.</p>
+                                <img src="Images/customers_avatars/avatar_2.jpg" alt="avatar" class="customers_avatar">
+                            </div>
+                        </div>
+                        <div class="itcss__item quotes_slider_item">
+                            <div class="customers_quote_block">
+                                <p class="customers_quote">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam suscipit, ipsum at rutrum luctus, nunc lacus facilisis sapien, in posuere mauris velit et purus. Class aptent taciti sociosqu ad litora torquent per conubia
+                                    nostra, per inceptos himenaeos.</p>
+                                <img src="Images/customers_avatars/avatar_3.jpg" alt="avatar" class="customers_avatar">
+                            </div>
+                        </div>
+                        <div class="itcss__item quotes_slider_item">
+                            <div class="customers_quote_block">
+                                <p class="customers_quote">Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.</p>
+                                <img src="Images/customers_avatars/avatar1.png" alt="avatar" class="customers_avatar">
+                            </div>
+                        </div>
+                        <div class="itcss__item quotes_slider_item">
+                            <div class="customers_quote_block">
+                                <p class="customers_quote">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam suscipit, ipsum at rutrum luctus, nunc lacus facilisis sapien, in posuere mauris velit et purus. Class aptent taciti sociosqu ad litora torquent per conubia
+                                    nostra, per inceptos himenaeos. Donec tincidunt porttitor turpis ut lobortis.</p>
+                                <img src="Images/customers_avatars/avatar_2.jpg" alt="avatar" class="customers_avatar">
+                            </div>
+                        </div>
+                        <div class="itcss__item quotes_slider_item">
+                            <div class="customers_quote_block">
+                                <p class="customers_quote">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam suscipit, ipsum at rutrum luctus, nunc lacus facilisis sapien, in posuere mauris velit et purus. Class aptent taciti sociosqu ad litora torquent per conubia
+                                    nostra, per inceptos himenaeos.</p>
+                                <img src="Images/customers_avatars/avatar_3.jpg" alt="avatar" class="customers_avatar">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="itcss__control itcss__control_prev quotes_prev_btn" href="#" role="button" data-slide="prev"></a>
+                <a class="itcss__control itcss__control_next quotes_next_btn" href="#" role="button" data-slide="next"></a>
+            </div>
+        </div>
+        <div class="faq">
+            <div class="faq_header">
+                <p>Customer help</p>
+                <h3>Frequently asked questions</h3>
+            </div>
+            <div class="faq_content_block">
+                <div class="faq_item">
+                    <div class="collapse_element">
+                        <image class="collapse_arrow" src="Images/faq/arrow_down.svg">&nbsp;&nbsp;&nbsp;
+                        <h4 class="collapse_text">Reque insolens in vel?</h4>
+                    </div>
+                    <div class="faq_content">
+                        <p class="faq_content_text">Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.</p>
+                        <a href="" class="faq_content_link">Go to the documentation</a>
+                    </div>
+                </div>
+                <hr>
+                <div class="faq_item">
+                    <div class="collapse_element">
+                        <image class="collapse_arrow" src="Images/faq/arrow_down.svg">&nbsp;&nbsp;&nbsp;
+                        <h4 class="collapse_text">Vis rebum error graecis ea, id sit postea accusamus?</h4>
+                    </div>
+                    <div class="faq_content">
+                        <p class="faq_content_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi varius venenatis libero. Nullam ultrices arcu et varius congue. In hac habitasse platea dictumst. Proin in molestie arcu. Cras turpis tortor, imperdiet vitae ante ut, posuere auctor tortor. Praesent ut tortor commodo, sodales mi vitae, feugiat dui. </p>
+                        <a href="" class="faq_content_link">Go to the documentation</a>
+                    </div>
+                </div>
+                <hr>
+                <div class="faq_item">
+                    <div class="collapse_element">
+                        <image class="collapse_arrow" src="Images/faq/arrow_down.svg">&nbsp;&nbsp;&nbsp;
+                        <h4 class="collapse_text">Lorem repudiandae ne nec?</h4>
+                    </div>
+                    <div class="faq_content">
+                        <p class="faq_content_text">Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.</p>
+                        <a href="" class="faq_content_link">Go to the documentation</a>
+                    </div>
+                </div>
+                <hr>
+                <div class="faq_item">
+                    <div class="collapse_element">
+                        <image class="collapse_arrow" src="Images/faq/arrow_down.svg">&nbsp;&nbsp;&nbsp;
+                        <h4 class="collapse_text">Reque insolens in vel?</h4>
+                    </div>
+                    <div class="faq_content">
+                        <p class="faq_content_text">Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi varius venenatis libero. Nullam ultrices arcu et varius congue. In hac habitasse platea dictumst. Proin in molestie arcu. Cras turpis tortor, imperdiet vitae ante ut, posuere auctor tortor. Praesent ut tortor commodo, sodales mi vitae, feugiat dui. </p>
+                        <a href="" class="faq_content_link">Go to the documentation</a>
+                    </div>
+                </div>
+                <hr>
+                <div class="faq_item">
+                    <div class="collapse_element">
+                        <image class="collapse_arrow" src="Images/faq/arrow_down.svg">&nbsp;&nbsp;&nbsp;
+                        <h4 class="collapse_text">Reque insolens in vel?</h4>
+                    </div>
+                    <div class="faq_content">
+                        <p class="faq_content_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi varius venenatis libero. Nullam ultrices arcu et varius congue. In hac habitasse platea dictumst. Proin in molestie arcu. Cras turpis tortor, imperdiet vitae ante ut, posuere auctor tortor. Praesent ut tortor commodo, sodales mi vitae, feugiat dui. </p>
+                        <a href="" class="faq_content_link">Go to the documentation</a>
+                    </div>
+                </div>
+                <hr>
+            </div>
+        </div>
+        <div class="get_started">
+            <div class="get_started_text">
+                <p>PLAN YOUR LIFE</p>
+                <h1>Get <b>started</b> now</h1>
+                <p class="get_started_discription">Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu atqui laudem an, insolens gubergren similique est cu. Et vel modus congue vituperata.</p>
+            </div>
+            <div class="get_started_btns">
+                <a href="" class="view_pricing_btn">View pricing</a>
+                <a href="" class="read_documentation_btn">Read documenation</a>    
+            </div>
+        </div>
+        <div class="newsletter">
+            <div class="newsletter_content">
+                <div>
+                    <h3 class="newsletter_header">Sign up for newsletter</h3>
+                    <p class="newsletter_text">Cu qui soleat partiendo urbanitas. Eum aperiri indoctum eu, homero alterum.</p>
+                </div>
+                <div class="newsletter_form">
+                    <form action="">
+                        <input class="newsletter_input" type="text" placeholder="Email address">
+                        <button class="newsletter_btn">Save me</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <hr class="hr100">
+    </main>
+    <footer>
+        <div class="logo"><img src="Images/logo.svg" alt="" class="logo"></div>
+        <nav class="navigation_links">
+            <a href="" class="nav_link">Home</a>
+            <a href="blog" class="nav_link">Blog</a>
+            <a href="features" class="nav_link">Features</a>
+            <a href="pricing" class="nav_link">Pricing</a>
+            <a href="documentation" class="nav_link">Documentation</a>
+        </nav>
+        <div class="socials">
+            <a class="social"><img src="Images/socials/facebook.svg" alt="facebook logo" class="social_img"></a>
+            <a class="social"><img src="Images/socials/telegram.svg" alt="telegram logo" class="social_img"></a>
+            <a class="social"><img src="Images/socials/twitter.svg" alt="twitter logo" class="social_img"></a>
+            <a class="social"><img src="Images/socials/m.svg" alt="m logo" class="social_img"></a>
+        </div>
+        <button class="header_btn">Get started</button>
+    </footer>
+    <script>
+        alert("Страница без адаптива, макет в width 1400");
+        let collapse_element = document.getElementsByClassName("collapse_element");
+        for (let i = 0; i < collapse_element.length; i++) { 
+            collapse_element[i].addEventListener('click', function(){
+                faq_content = document.getElementsByClassName("faq_content");
+                for(let x = 0; x < faq_content.length; x++){
+                    if (x != i){
+                        document.getElementsByClassName("faq_content")[x].style.maxHeight = 0;
+                    }
+                }
+                faq_arrow = document.getElementsByClassName('collapse_arrow');
+                faq_content_text = document.getElementsByClassName('faq_content_text');
+                faq_content_height = faq_content_text[i].scrollHeight + 20;
+                if(faq_content[i].style.maxHeight != faq_content_height + 'px'){
+                    faq_content[i].style.maxHeight = faq_content_height + 'px';
+                    faq_arrow[i].style.transform = 'rotate(180deg)'
+                }else{
+                    faq_content[i].style.maxHeight = 0;
+                    faq_arrow[i].style.transform = 'rotate(0deg)'
+                }
+            })
+        }
+        let anchor = document.getElementsByClassName('nav_link');
+        for(let i = 0; i < anchor.length; i++){
+            anchor[i].addEventListener('click', function(element){
+                element.preventDefault();
+                if( i != 0){
+                    alert("Страницы " + anchor[i].getAttribute('href') + " нет в макете");
+                }
+            })
+        }
+        play_btn = document.getElementsByClassName("play_btn")[0];
+        play_btn.addEventListener('click', function(){
+            alert('Кнопка play (Не знаю зачем она)');
+        })
+        hero_btn = document.getElementsByClassName("hero_image_btn")[0];
+        hero_btn.addEventListener('click', function(){
+            alert('Ещё одна кнопка');
+        })
+    </script>
+</body>
+</html>
