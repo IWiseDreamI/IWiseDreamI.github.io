@@ -11,17 +11,17 @@
     <header>
         <h2 class="logo">WiseDream</h2>
         <nav class="nav">
-            <a href="" class="nav_link">Home</a>
-            <a href="" class="nav_link">About</a>
-            <a href="" class="nav_link">Techologies</a>
-            <a href="" class="nav_link">Projects</a>
-            <a href="" class="nav_link">Contact</a>
+            <a href="" class="nav_link" id="0">Home</a>
+            <a href="" class="nav_link" id="1">About</a>
+            <a href="" class="nav_link" id="2">Techologies</a>
+            <a href="" class="nav_link" id="3">Projects</a>
+            <a href="" class="nav_link" id="4">Contact</a>
             <a class="social" href="https://t.me/Wise_Dream"><img src="images/socials/telegram.svg" alt="teltgram logo" class="social"></a>
             <a class="social" href="https://github.com/IWiseDreamI"><img src="images/socials/github.svg" alt="github logo" class="social"></a>
             <a class="social" href="https://discordapp.com/users/WiseDream#1662/"><img src="images/socials/discord.svg" alt="discord logo" class="social"></a>
         </nav>
     </header>
-    <main>
+    <main class="main">
         <div class="page_description">
             <div class="hello_block">
                 <p>Сайт-портфолио верстальщика WiseDream</p>
@@ -38,22 +38,22 @@
         </div>
         <div class="technologies_block">
             <div class="technologies">
-                <h2 class="technologies_header">Tehnologies</h2>
-                <img src="images/technologies/html5.svg" alt="" class="technology">
-                <img src="images/technologies/css3.svg" alt="" class="technology">
-                <img src="images/technologies/sass.svg" alt="" class="technology">
-                <img src="images/technologies/js.svg" alt="" class="technology">
-                <img src="images/technologies/jquery.svg" alt="" class="technology">
-                <img src="images/technologies/github.svg" alt="" class="technology">
-                <img src="images/technologies/git.svg" alt="" class="technology">
-                <img src="images/technologies/vscode.svg" alt="" class="technology">
-                <img src="images/technologies/figma.svg" alt="" class="technology">
+                <h2 class="technologies_header">Technologies</h2>
+                <img src="images/technologies/html5.svg" alt="html5 logo" class="technology">
+                <img src="images/technologies/css3.svg" alt="css logo" class="technology">
+                <img src="images/technologies/sass.svg" alt="sass logo" class="technology">
+                <img src="images/technologies/js.svg" alt="js logo" class="technology">
+                <img src="images/technologies/jquery.svg" alt="jquery logo" class="technology">
+                <img src="images/technologies/github.svg" alt="github logo" class="technology">
+                <img src="images/technologies/git.svg" alt="git logo" class="technology">
+                <img src="images/technologies/vscode.svg" alt="vscode logo" class="technology">
+                <img src="images/technologies/figma.svg" alt="figma logo" class="technology">
             </div>
         </div>
         <div class="projects">
             <h2 class="projects_header">My projects</h2>
             <div class="project">
-                <div class="project_img"></div>
+                <div class="project_i222mg"></div>
                 <div class="project_text"></div>
             </div>
             <div class="project">
@@ -87,7 +87,60 @@
         </div>
     </main>
     <footer>
-        
+        <div class="footer_info_block">
+            <p class="footer_info">+7924 167 45 99</p>
+            <a href="mailto:IndifferentSomething@gmail.com" class="footer_info">IndifferentSomething@gmail.com</a>
+        </div>
+        <div class="socials">
+            <a class="social" href="https://t.me/Wise_Dream"><img src="images/socials/telegram.svg" alt="teltgram logo" class="social"></a>
+            <a class="social" href="https://github.com/IWiseDreamI"><img src="images/socials/github.svg" alt="github logo" class="social"></a>
+            <a class="social" href="https://discordapp.com/users/WiseDream#1662/"><img src="images/socials/discord.svg" alt="discord logo" class="social"></a>
+        </div>
     </footer>
 </body>
+<script>
+    document.addEventListener('keydown', function(element){
+        if(element.key == 'ArrowUp' ||  element.key == 'ArrowDown'){
+            element.preventDefault();
+        }
+    })
+    function Scroll(element){
+        scroll_height = window.innerHeight;
+        scroll_position = document.documentElement.scrollTop;
+        total_page_height = document.documentElement.scrollHeight;
+        if(element.key == 'ArrowDown'){
+            element.preventDefault();
+            window.scrollBy({top: scroll_height, behavior: 'smooth'});
+        }
+        else if(element.key == 'ArrowUp'){
+            element.preventDefault();
+            if((total_page_height - scroll_position) / scroll_position > 0.36){
+                window.scrollBy({top: -scroll_height, behavior: 'smooth'});
+
+            }else{
+                window.scrollBy({top: -(0.1 * scroll_height), behavior: 'smooth'});
+
+            }
+        }
+    }
+    document.addEventListener('keydown', function f(element){
+        Scroll(element);
+        document.removeEventListener('keydown', f);
+        setTimeout( function(){document.addEventListener('keydown', f)}, 500);
+    })
+    nav_link_num = document.getElementsByClassName('nav_link').length
+    for(let n = 0; n < nav_link_num; n++){
+        document.getElementsByClassName('nav_link')[n].addEventListener('click', function(element){
+            element.preventDefault();
+            scroll_height = window.innerHeight;
+            scroll_position = Number(document.getElementsByClassName('nav_link')[n].id) * scroll_height;
+            window.scrollTo({top: scroll_position, behavior: 'smooth'});
+        })
+    }
+    window.addEventListener('scroll', setTimeout(function(){
+        scroll_height = window.innerHeight;
+        scroll_position = Math.round(document.documentElement.scrollTop / scroll_height);
+        window.scrollTo({top: scroll_position});
+    }, 1000))
+</script>
 </html>
