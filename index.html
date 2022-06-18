@@ -36,7 +36,7 @@
                 </div>
             </div>
         </div>
-        <div class="technologies_block">
+        <div class="technologies_block" id="technologies">
             <div class="technologies">
                 <h2 class="technologies_header">Technologies</h2>
                 <img src="images/technologies/html5.svg" alt="html5 logo" class="technology">
@@ -50,51 +50,56 @@
                 <img src="images/technologies/figma.svg" alt="figma logo" class="technology">
             </div>
         </div>
-        <div class="projects">
+        <div class="projects_block">
             <h2 class="projects_header">My projects</h2>
-            <div class="project">
-                <div class="project_i222mg"></div>
-                <div class="project_text"></div>
+            <div class="projects">
+                <div class="project">
+                    <div class="project_img"></div>
+                    <div class="project_text"></div>
+                </div>
+                <div class="project">
+                    <div class="project_img"></div>
+                    <div class="project_text"></div>
+                </div>
+                <div class="project">
+                    <div class="project_img"></div>
+                    <div class="project_text"></div>
+                </div>
+                <div class="project">
+                    <div class="project_img"></div>
+                    <div class="project_text"></div>
+                </div>
+                <div class="project">
+                    <div class="project_img"></div>
+                    <div class="project_text"></div>
+                </div>
+                <div class="project">
+                    <div class="project_img"></div>
+                    <div class="project_text"></div>
+                </div>
+                <div class="project">
+                    <div class="project_img"></div>
+                    <div class="project_text"></div>
+                </div>
+                <div class="project">
+                    <div class="project_img"></div>
+                    <div class="project_text"></div>
+                </div>
             </div>
-            <div class="project">
-                <div class="project_img"></div>
-                <div class="project_text"></div>
-            </div>
-            <div class="project">
-                <div class="project_img"></div>
-                <div class="project_text"></div>
-            </div>
-            <div class="project">
-                <div class="project_img"></div>
-                <div class="project_text"></div>
-            </div>
-            <div class="project">
-                <div class="project_img"></div>
-                <div class="project_text"></div>
-            </div>
-            <div class="project">
-                <div class="project_img"></div>
-                <div class="project_text"></div>
-            </div>
-            <div class="project">
-                <div class="project_img"></div>
-                <div class="project_text"></div>
-            </div>
-            <div class="project">
-                <div class="project_img"></div>
-                <div class="project_text"></div>
-            </div>
+        </div>
+        <div class="for_customers">
+
         </div>
     </main>
     <footer>
-        <div class="footer_info_block">
-            <p class="footer_info">+7924 167 45 99</p>
-            <a href="mailto:IndifferentSomething@gmail.com" class="footer_info">IndifferentSomething@gmail.com</a>
-        </div>
         <div class="socials">
             <a class="social" href="https://t.me/Wise_Dream"><img src="images/socials/telegram.svg" alt="teltgram logo" class="social"></a>
             <a class="social" href="https://github.com/IWiseDreamI"><img src="images/socials/github.svg" alt="github logo" class="social"></a>
             <a class="social" href="https://discordapp.com/users/WiseDream#1662/"><img src="images/socials/discord.svg" alt="discord logo" class="social"></a>
+        </div>
+        <div class="footer_info_block">
+            <p class="footer_info">+7924 167 45 99</p>
+            <a href="mailto:IndifferentSomething@gmail.com" class="footer_info">IndifferentSomething@gmail.com</a>
         </div>
     </footer>
 </body>
@@ -114,13 +119,10 @@
         }
         else if(element.key == 'ArrowUp'){
             element.preventDefault();
-            if((total_page_height - scroll_position) / scroll_position > 0.36){
-                window.scrollBy({top: -scroll_height, behavior: 'smooth'});
-
-            }else{
-                window.scrollBy({top: -(0.1 * scroll_height), behavior: 'smooth'});
-
-            }
+            window.scrollBy({top: -scroll_height, behavior: 'smooth'});
+        }
+        else if(element.key == 'J' || element.key == 'j'){
+            document.getElementById('technologies').scrollIntoView({block: "center", inline: "center", behavior: 'smooth'});
         }
     }
     document.addEventListener('keydown', function f(element){
@@ -137,10 +139,15 @@
             window.scrollTo({top: scroll_position, behavior: 'smooth'});
         })
     }
-    window.addEventListener('scroll', setTimeout(function(){
-        scroll_height = window.innerHeight;
-        scroll_position = Math.round(document.documentElement.scrollTop / scroll_height);
-        window.scrollTo({top: scroll_position});
-    }, 1000))
+    let timer = null;
+    window.addEventListener('scroll', function() {
+        if(timer !== null) {
+            clearTimeout(timer);        
+        }
+        timer = setTimeout(function() {
+            scroll_position = Math.round(document.documentElement.scrollTop / window.innerHeight) * window.innerHeight;
+            window.scrollTo({top: scroll_position, behavior: 'smooth'});
+        }, 400);
+    }, false);
 </script>
 </html>
