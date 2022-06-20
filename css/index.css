@@ -77,7 +77,7 @@ main {
           flex-direction: column;
 }
 
-.page_description {
+.page_discription {
   width: 100%;
   height: 100vh;
   display: -webkit-box;
@@ -161,13 +161,13 @@ main {
 
 .about_text {
   width: 40%;
-  height: 90%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin: 5% 2.5%;
-  padding: 0px 30px;
+  padding: 20px 30px;
   margin-left: auto;
+  text-align: center;
   border-radius: 30px;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -198,8 +198,8 @@ main {
 }
 
 .technologies {
-  width: 36%;
-  height: 80%;
+  width: 400px;
+  height: 400px;
   margin: 15vh 5%;
   margin-left: auto;
   -webkit-user-select: none;
@@ -219,9 +219,9 @@ main {
 }
 
 .technology {
-  width: 90px;
-  margin: 20px;
-  height: 90px;
+  width: 25%;
+  margin: 3%;
+  height: 25%;
 }
 
 .technologies_discriptions_block {
@@ -304,7 +304,7 @@ main {
 }
 
 .projects_header {
-  margin: 5vh 0 2vh;
+  margin: 2vh 0 2vh;
   font-size: 40px;
   text-align: center;
   font-family: Nunito;
@@ -335,13 +335,14 @@ main {
 }
 
 /*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
-.for_customers {
+.customers {
   width: 100%;
   height: 100vh;
-  background-size: 100% 100%;
+  background-size: 100% 140%;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: url("../images/backgrounds/for_customers.jpg");
+  background-position-y: bottom;
+  background-image: url("../images/backgrounds/customers.jpg");
 }
 
 /*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
@@ -378,17 +379,30 @@ p {
   margin: 5px;
   font-size: 16px;
   font-weight: 600;
-  text-align: center;
   font-family: Nunito;
 }
 
 /*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 ::-webkit-scrollbar {
-  width: 5px;
+  width: 10px;
   height: 8px;
   background-color: #aaa;
 }
 
 ::-webkit-scrollbar-thumb {
   background: #000;
+}
+
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+@media (max-width: 500px) {
+  header {
+    z-index: 2;
+    width: 100vw;
+    height: 40px;
+  }
+
+  .social {
+    width: 15px;
+    height: 15px;
+  }
 }

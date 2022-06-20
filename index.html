@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="css/index.css">
     <title>WiseDream</title>
 </head>
-<body>
+<body id="body">
     <header>
         <h2 class="logo">WiseDream</h2>
         <nav class="nav">
@@ -15,14 +16,14 @@
             <a href="" class="nav_link" id="1">About</a>
             <a href="" class="nav_link" id="2">Techologies</a>
             <a href="" class="nav_link" id="3">Projects</a>
-            <a href="" class="nav_link" id="4">Contact</a>
+            <a href="" class="nav_link" id="4">Customers</a>
             <a class="social" href="https://t.me/Wise_Dream"><img src="images/socials/telegram.svg" alt="teltgram logo" class="social"></a>
             <a class="social" href="https://github.com/IWiseDreamI"><img src="images/socials/github.svg" alt="github logo" class="social"></a>
             <a class="social" href="https://discordapp.com/users/WiseDream#1662/"><img src="images/socials/discord.svg" alt="discord logo" class="social"></a>
         </nav>
     </header>
     <main class="main">
-        <div class="page_description">
+        <div class="page_discription">
             <div class="hello_block">
                 <p>Сайт-портфолио верстальщика WiseDream</p>
                 <h2 class="hello_header">Веб-разработка и верстка сайтов по макетам</h2>
@@ -32,7 +33,7 @@
             <div class="about">
                 <h2 class="about_header">About</h2>
                 <div class="about_text">
-                    <p> Здравствуйте, я верстальщик и начинающий веб-разработчик. </p><p> Могу сверстать макет низкой, средней и выше среднего сложностей. </p><p> Вёрстка кроссбраузерна и адаптивна.</p> <p> Для вёрстки использую HTML, CSS, SASS, JS, JQuery. </p><p> Стоимость работ будет зависеть от сложности выполняемого макета. </p><p> Могу внести дополнительные правки и улучшения в функционал и дизайн сайта, если заказчик будет согласен. </p>
+                    <p> Здравствуйте, я верстальщик и начинающий веб-разработчик. </p><p> Могу сверстать макет низкой, средней и выше среднего сложностей. </p><p> Вёрстка кроссбраузерна и адаптивна.</p> <p> Для вёрстки использую HTML, CSS, SASS, JS, JQuery. </p>
                 </div>
             </div>
         </div>
@@ -125,7 +126,7 @@
                 </div>
             </div>
         </div>
-        <div class="for_customers">
+        <div class="customers">
 
         </div>
     </main>
@@ -141,7 +142,27 @@
         </div>
     </footer>
 </body>
-<script>
+<script>    
+    let event = null;
+    document.addEventListener("touchstart", function (e) {
+        event = e;
+    });
+    document.addEventListener("touchmove", function (e) {
+        if (event) {
+            scroll_height = window.innerHeight;
+            if(e.touches[0].pageY - event.touches[0].pageY < 0){
+                e.preventDefault();
+                window.scrollBy({top: scroll_height, behavior: 'smooth'});
+            }
+            else{
+                window.scrollBy({top: -scroll_height, behavior: 'smooth'});
+            }
+        }
+    });
+    document.addEventListener("touched", function (e) {
+        event = null;
+    });
+
     document.addEventListener('keydown', function(element){
         if(element.key == 'ArrowUp' ||  element.key == 'ArrowDown'){
             element.preventDefault();
@@ -159,9 +180,6 @@
             element.preventDefault();
             window.scrollBy({top: -scroll_height, behavior: 'smooth'});
         }
-        else if(element.key == 'J' || element.key == 'j'){
-            document.getElementById('technologies').scrollIntoView({block: "center", inline: "center", behavior: 'smooth'});
-        }
     }
     document.addEventListener('keydown', function f(element){
         Scroll(element);
@@ -177,16 +195,18 @@
             window.scrollTo({top: scroll_position, behavior: 'smooth'});
         })
     }
-    let timer = null;
-    window.addEventListener('scroll', function() {
-        if(timer !== null) {
-            clearTimeout(timer);        
-        }
-        timer = setTimeout(function() {
-            scroll_position = Math.round(document.documentElement.scrollTop / window.innerHeight) * window.innerHeight;
-            window.scrollTo({top: scroll_position, behavior: 'smooth'});
-        }, 300);
-    }, false);
+    if(window.innerHeigh / window.innerWidth < 1){
+        window.addEventListener('scroll', function(){
+            window.addEventListener('mouseup', function(){
+                scroll_position = Math.round(document.documentElement.scrollTop / window.innerHeight) * window.innerHeight;
+                window.scrollTo({top: scroll_position, behavior: 'smooth'});
+            }, 600)
+            window.addEventListener('touchend', function(){
+                scroll_position = Math.round(document.documentElement.scrollTop / window.innerHeight) * window.innerHeight;
+                window.scrollTo({top: scroll_position, behavior: 'smooth'});
+            })
+        })
+    }
     for(let i = 0; document.getElementsByClassName('technology').length; i++){
         document.getElementsByClassName('technology')[i].addEventListener('mouseover', function(){
             document.getElementsByClassName('technology_discription')[i].style.display = 'flex';
