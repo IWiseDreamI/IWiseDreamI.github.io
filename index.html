@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <script src="js/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="css/index.css">
     <title>WiseDream</title>
@@ -17,10 +17,12 @@
             <a href="" class="nav_link" id="2">Techologies</a>
             <a href="" class="nav_link" id="3">Projects</a>
             <a href="" class="nav_link" id="4">Customers</a>
+        </nav>
+        <div class="socials">
             <a class="social" href="https://t.me/Wise_Dream"><img src="images/socials/telegram.svg" alt="teltgram logo" class="social"></a>
             <a class="social" href="https://github.com/IWiseDreamI"><img src="images/socials/github.svg" alt="github logo" class="social"></a>
             <a class="social" href="https://discordapp.com/users/WiseDream#1662/"><img src="images/socials/discord.svg" alt="discord logo" class="social"></a>
-        </nav>
+        </div>
     </header>
     <main class="main">
         <div class="page_discription">
@@ -33,7 +35,7 @@
             <div class="about">
                 <h2 class="about_header">About</h2>
                 <div class="about_text">
-                    <p> Здравствуйте, я верстальщик и начинающий веб-разработчик. </p><p> Могу сверстать макет низкой, средней и выше среднего сложностей. </p><p> Вёрстка кроссбраузерна и адаптивна.</p> <p> Для вёрстки использую HTML, CSS, SASS, JS, JQuery. </p>
+                    <p> Здравствуйте, я верстальщик и начинающий веб-разработчик. </p><p> Могу сверстать макет низкой, средней и выше среднего сложностей. </p><p> Вёрстка адаптивна (при наличии макета для мобильного варианта) и кроссбраузерна.</p> <p> Для вёрстки использую HTML, CSS, SASS, JS, JQuery. </p>
                 </div>
             </div>
         </div>
@@ -142,27 +144,7 @@
         </div>
     </footer>
 </body>
-<script>    
-    let event = null;
-    document.addEventListener("touchstart", function (e) {
-        event = e;
-    });
-    document.addEventListener("touchmove", function (e) {
-        if (event) {
-            scroll_height = window.innerHeight;
-            if(e.touches[0].pageY - event.touches[0].pageY < 0){
-                e.preventDefault();
-                window.scrollBy({top: scroll_height, behavior: 'smooth'});
-            }
-            else{
-                window.scrollBy({top: -scroll_height, behavior: 'smooth'});
-            }
-        }
-    });
-    document.addEventListener("touched", function (e) {
-        event = null;
-    });
-
+<script>
     document.addEventListener('keydown', function(element){
         if(element.key == 'ArrowUp' ||  element.key == 'ArrowDown'){
             element.preventDefault();
