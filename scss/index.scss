@@ -4,7 +4,7 @@ body{
     margin: 0;
     padding: 0;
     display: flex;
-    height: 500vh;
+    height: 480vh;
     align-items: center;
     flex-direction: column;
     background-color: rgba(168, 168, 168, 0.75);
@@ -424,6 +424,7 @@ p{
     /*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/    
     footer{
         margin: 0;
+        padding: 0;
         width: 100%;
         bottom: 40px;
         height: 40px;
