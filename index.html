@@ -172,7 +172,7 @@
     for(let n = 0; n < nav_link_num; n++){
         document.getElementsByClassName('nav_link')[n].addEventListener('click', function(element){
             element.preventDefault();
-            scroll_height = window.innerHeight;
+            scroll_height = document.getElementsByClassName('page_discription')[0].clientHeight;
             scroll_position = Number(document.getElementsByClassName('nav_link')[n].id) * scroll_height;
             window.scrollTo({top: scroll_position, behavior: 'smooth'});
         })
