@@ -64,6 +64,7 @@ nav {
 }
 
 .nav_link {
+  cursor: pointer;
   color: #744343;
   text-decoration: none;
 }
@@ -275,14 +276,14 @@ nav {
 /*///////////////////////////////////////////////////////////////////////////////*/
 .portfolio_block {
   width: 100vw;
-  height: 115vh;
+  height: 124vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 10vh 0vw 0vh;
+  padding: 5vh 0vw 0vh;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -298,7 +299,7 @@ nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 15vh;
+  margin-top: 5vh;
   color: #DD7979;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -372,7 +373,7 @@ nav {
   display: -ms-flexbox;
   display: flex;
   height: 140vh;
-  padding: 20vh 0vw;
+  padding: 10vh 0vw;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;

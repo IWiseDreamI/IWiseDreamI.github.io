@@ -34,6 +34,7 @@ nav{
     justify-content: space-around;
 }
 .nav_link{
+    cursor: pointer;
     color: #744343;
     text-decoration: none;
 }
@@ -169,10 +170,10 @@ nav{
 /*///////////////////////////////////////////////////////////////////////////////*/
 .portfolio_block{
     width: 100vw;
-    height: 115vh;
+    height: 124vh;
     display: flex;
     align-items: center;
-    padding: 10vh 0vw 0vh;
+    padding: 5vh 0vw 0vh;
     flex-direction: column;
     justify-content: center;
     background-color: #fff;
@@ -180,7 +181,7 @@ nav{
 .portfolio_header{
     width: 60vw;
     display: flex;
-    margin-top: 15vh;
+    margin-top: 5vh;
     color: #DD7979;
     align-items: center;
     flex-direction: column;
@@ -227,7 +228,7 @@ nav{
     width: 100vw;
     display: flex;
     height: 140vh;
-    padding: 20vh 0vw;
+    padding: 10vh 0vw;
     align-items: center;
     justify-content: center;
     background-size: 100% 100%;

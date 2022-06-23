@@ -11,16 +11,16 @@
     <header>
         <img src="images/logo.svg" alt="" class="logo">
         <nav>
-            <a href="" class="nav_link">Overview</a>
-            <a href="" class="nav_link">Home</a>
-            <a href="" class="nav_link">Portfolio</a>
-            <a href="" class="nav_link">Pages</a>
-            <a href="" class="nav_link">Template</a>
+            <a class="nav_link">Overview</a>
+            <a class="nav_link">Home</a>
+            <a class="nav_link">Portfolio</a>
+            <a class="nav_link">Pages</a>
+            <a class="nav_link">Template</a>
         </nav>
         <div class="contact_us">Contact us</div>
     </header>
     <main>
-        <div class="overview_block">
+        <div class="overview_block anchor">
             <div class="overview_content">
                 <p class="block_header_text">INTRODUCING TO YOU LUNAR</p>
                 <h2>Unique illustrations <br> to present your project</h2><br>
@@ -48,7 +48,7 @@
                 </div>
             </div>
         </div>
-        <div class="home_block">
+        <div class="home_block anchor">
             <div class="home_header">
                 <p class="block_header_text">START BY CHOOSING YOUR</p>
                 <h2><b>Landing page layouts</b></h2>    
@@ -96,7 +96,7 @@
                 </div>
             </div>
         </div>
-        <div class="portfolio_block">
+        <div class="portfolio_block anchor">
             <div class="portfolio_header">
                 <p class="block_header_text">AMAZING FEATURES</p><br>
                 <h2>What You Get</h2>
@@ -128,7 +128,7 @@
                 </div>
             </div>
         </div>
-        <div class="pages_block">
+        <div class="pages_block anchor">
             <div class="pages">
                 <div class="page_30">Portfolio vr.1</div>
                 <div class="page_30">Portfolio vr.2</div>
@@ -149,7 +149,7 @@
                 <div class="page_45">Contact</div>    
             </div>
         </div>
-        <div class="newsletter_block">
+        <div class="newsletter_block anchor">
             <div class="newsletter_header">
                 <p  class="block_header_text">OUR NEWSLETTER</p><br>
                 <h2>Subscribe to Lunar Newsletter</h2>
@@ -205,9 +205,16 @@
             </div>
         </div>
         <hr>
-        <div class="footer_bottom_block">
-
-        </div>
+        <div class="footer_bottom_block"></div>
     </footer>
 </body>
+<script src="../../js/jquery-3.6.0.min.js"></script>
+<script>
+    for(let i = 0;i < $('.nav_link').length;i++){
+        $('.nav_link')[i].addEventListener('click', function(){
+            scroll_to = $('.anchor')[i]
+            scroll_to.scrollIntoView({behavior: 'smooth', block: "start", inline: "nearest"});
+        })
+    }
+</script>
 </html>
