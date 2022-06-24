@@ -6,17 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <script src="js/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="js/chief-scroll/chief-slider.css">
+    <script src="js/chief-scroll/chief-slider.js"></script>
     <title>WiseDream</title>
 </head>
 <body id="body">
     <header>
         <h2 class="logo">WiseDream</h2>
         <nav class="nav">
-            <a href="" class="nav_link" id="0">Home</a>
-            <a href="" class="nav_link" id="1">About</a>
-            <a href="" class="nav_link" id="2">Techologies</a>
-            <a href="" class="nav_link" id="3">Projects</a>
-            <a href="" class="nav_link" id="4">Customers</a>
+            <a class="nav_link">Home</a>
+            <a class="nav_link">About</a>
+            <a class="nav_link">Techologies</a>
+            <a class="nav_link">Projects</a>
         </nav>
         <div class="socials">
             <a class="social" href="https://t.me/Wise_Dream"><img src="images/socials/telegram.svg" alt="teltgram logo" class="social"></a>
@@ -25,13 +26,13 @@
         </div>
     </header>
     <main class="main">
-        <div class="page_discription">
+        <div class="page_discription anchor">
             <div class="hello_block">
                 <p>Сайт-портфолио верстальщика WiseDream</p>
                 <h2 class="hello_header">Веб-разработка и верстка сайтов по макетам</h2>
             </div>
         </div>
-        <div class="about_block">
+        <div class="about_block anchor">
             <div class="about">
                 <h2 class="about_header">About</h2>
                 <div class="about_text">
@@ -39,7 +40,7 @@
                 </div>
             </div>
         </div>
-        <div class="technologies_block" id="technologies">
+        <div class="technologies_block anchor" id="technologies">
             <div class="technologies_discriptions_block">
                 <div class="technology_discription" id="html_discription">
                     <h2 class="discription_header">HTML</h2>
@@ -91,39 +92,28 @@
                 <img src="images/technologies/figma.svg" alt="figma logo" class="technology">
             </div>
         </div>
-        <div class="projects_block">
-            <h2 class="projects_header">My projects</h2>
-            <div class="projects">
-                <div class="project">
-                    <img src="my_projects/images/lunar.png" alt="" class="project_img">
-                    <div class="project_text">
-                        <a href="my_projects/lunar/index.html">Lunar</a>
+        <div class="projects_block anchor">
+            <div class="slider project_scroll">
+                <div class="slider__wrapper">
+                  <div class="slider__items">
+                    <div class="slider__item projects">
+                        <div class="project"></div>
+                        <div class="project"></div>
                     </div>
+                    <div class="slider__item projects">
+                        <div class="project"></div>
+                        <div class="project"></div>
+                    </div>
+                    <div class="slider__item projects">
+                        <div class="project"></div>
+                        <div class="project"></div>
+                    </div>
+                  </div>
                 </div>
-                <div class="project">
-                    <img src="" alt="" class="project_img">
-                    <div class="project_text"></div>
-                </div>
-                <div class="project">
-                    <img src="" alt="" class="project_img">
-                    <div class="project_text"></div>
-                </div>
-                <div class="project">
-                    <img src="" alt="" class="project_img">
-                    <div class="project_text"></div>
-                </div>
-                <div class="project">
-                    <img src="" alt="" class="project_img">
-                    <div class="project_text"></div>
-                </div>
-                <div class="project">
-                    <img src="" alt="" class="project_img">
-                    <div class="project_text"></div>
-                </div>
-            </div>
-        </div>
-        <div class="customers">
-
+                <!-- Кнопки -->
+                <a href="#" class="slider__control" data-slide="prev"></a>
+                <a href="#" class="slider__control" data-slide="next"></a>
+              </div>
         </div>
     </main>
     <footer>
@@ -139,56 +129,42 @@
     </footer>
 </body>
 <script>
-    document.addEventListener('keydown', function(element){
-        if(element.key == 'ArrowUp' ||  element.key == 'ArrowDown'){
+        new ChiefSlider('.slider',{
+            loop: true,
+            autoplay: false,
+            swipe: true,
+            refresh: false
+        });
+    document.addEventListener('keydown', function scroll(element){
+        if(element.key == 'ArrowUp' || element.key == 'ArrowDown'){
             element.preventDefault();
+            if(element.key =='ArrowUp'){
+                window.scrollBy({top: -window.innerHeight, behavior: 'smooth'});
+            }
+            else{
+                window.scrollBy({top: window.innerHeight, behavior: 'smooth'});
+            }        
         }
     })
-    function Scroll(element){
-        scroll_height = window.innerHeight;
-        scroll_position = document.documentElement.scrollTop;
-        total_page_height = document.documentElement.scrollHeight;
-        if(element.key == 'ArrowDown'){
-            element.preventDefault();
-            window.scrollBy({top: scroll_height, behavior: 'smooth'});
-        }
-        else if(element.key == 'ArrowUp'){
-            element.preventDefault();
-            window.scrollBy({top: -scroll_height, behavior: 'smooth'});
-        }
-    }
-    document.addEventListener('keydown', function f(element){
-        Scroll(element);
-        document.removeEventListener('keydown', f);
-        setTimeout( function(){document.addEventListener('keydown', f)}, 500);
-    })
-    nav_link_num = document.getElementsByClassName('nav_link').length
-    for(let n = 0; n < nav_link_num; n++){
-        document.getElementsByClassName('nav_link')[n].addEventListener('click', function(element){
-            element.preventDefault();
-            scroll_height = document.getElementsByClassName('page_discription')[0].clientHeight;
-            scroll_position = Number(document.getElementsByClassName('nav_link')[n].id) * scroll_height;
-            window.scrollTo({top: scroll_position, behavior: 'smooth'});
+    var timer = null;
+    $(window).on('scroll', function() {
+        clearTimeout(timer);
+        timer = setTimeout(function() {
+            i = Math.round(document.documentElement.scrollTop/document.documentElement.clientHeight);
+            $('.anchor')[i].scrollIntoView({behavior:"smooth", block:"start"});
+        }, 400);
+    });
+    for(let i = 0; i < $('.nav_link').length; i++){
+        $('.nav_link')[i].addEventListener('click', function(){
+            $('.anchor')[i].scrollIntoView({behavior:"smooth", block:"start"});
         })
     }
-    if(window.innerHeigh / window.innerWidth < 1){
-        window.addEventListener('scroll', function(){
-            window.addEventListener('mouseup', function(){
-                scroll_position = Math.round(document.documentElement.scrollTop / window.innerHeight) * window.innerHeight;
-                window.scrollTo({top: scroll_position, behavior: 'smooth'});
-            }, 600)
-            window.addEventListener('touchend', function(){
-                scroll_position = Math.round(document.documentElement.scrollTop / window.innerHeight) * window.innerHeight;
-                window.scrollTo({top: scroll_position, behavior: 'smooth'});
-            })
-        })
-    }
-    for(let i = 0; i < document.getElementsByClassName('technology').length; i++){
-        document.getElementsByClassName('technology')[i].addEventListener('mouseover', function(){
-            document.getElementsByClassName('technology_discription')[i].style.display = 'flex';
-            for(let x = 0; x < document.getElementsByClassName('technology').length; x++){
+    for(let i = 0; i < $('.technology').length; i++){
+        $('.technology')[i].addEventListener('mouseover', function(){
+            $('.technology_discription')[i].style.display = 'flex';
+            for(let x = 0; x < $('.technology').length; x++){
                 if (x != i){
-                    document.getElementsByClassName('technology_discription')[x].style.display = 'none'; 
+                    $('.technology_discription')[x].style.display = 'none'; 
                 } 
             }
         })
