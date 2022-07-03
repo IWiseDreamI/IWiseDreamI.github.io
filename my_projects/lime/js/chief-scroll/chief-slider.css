@@ -1,0 +1,220 @@
+/*!
+* chiefSlider
+*	site: https://itchief.ru/javascript/slider
+*	github: https://github.com/itchief/ui-components
+*
+* Copyright 2018-2021 Alexander Maltsev
+* Licensed under MIT (https://github.com/itchief/ui-components/blob/master/LICENSE)
+*/
+
+.slider {
+    width: 80%;
+	display: flex;
+    margin-top: 1vh;
+	position: relative;
+	justify-content: center;
+}
+.products__slider{
+	width: 100%;	
+	border-radius: 10px;
+	box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.1);
+}
+.food-receipts__slider{
+	height: 84%;
+	width: 100%;
+	display: flex;
+	align-items: center;
+}
+.slider__container {
+    width: 100%;
+	overflow: hidden;
+	border-radius: 10px;
+}
+.slider__items {
+	display: flex;
+	transition: transform 0.8s ease;
+}
+  
+.slider_disable-transition {
+	transition: 0.8s;
+}
+.slider__item {
+	width: 100%;
+	display: flex;
+	flex: 0 0 100%;
+	max-width: 100%;
+	user-select: none;
+	align-items: center;
+	justify-content: center;
+}
+.product p{
+	width: 80%;
+}
+.product{
+	width: 16%;
+	height: 290px;
+	display: flex;
+	position: relative;
+	user-select: none;
+	flex: 0 0 16.667%;
+	max-width: 16.667%;
+	border-radius: 10px;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+	background-color: #fff;
+}
+.product:hover{
+	z-index: 1;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+.food-item{
+	height: 100%;
+	display: flex;
+	flex: 0 0 36%;
+	max-width: 36%;
+	padding: 0% 2%;
+	user-select: none;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+}
+.food-item p{
+	padding: 10px 0;
+	font-weight: bold;
+}
+.slider__item img{
+	width: 100%;
+}
+.product img{
+	width: auto;
+	height: 134px;
+}
+.food-item img{
+	width:  100%;
+}
+.product__favorite{
+	top: 2%;
+	left: 5%;
+	fill: #C8C8C8;
+	position: absolute;
+}
+.product__name{
+	font-size: 12px;
+	font-weight: 600;
+}
+.product__price{
+	padding: 6px;
+	font-size: 14px;
+	font-weight: bold;
+	font-family: Montserrat;
+}
+.product__buy-btn{
+	width: 80%;
+	display: flex;
+	font-size: 12px;
+	font-weight: bold;
+	align-items: center;
+}
+.product__buy-btn-plus{
+	width: 28px;
+	height: 28px;
+	display: flex;
+	font-size: 24px;
+	font-weight: 500;
+	border-radius: 5px;
+	align-items: center;
+	justify-content: center;
+	margin: 0px 10px 0px 0px;
+	background-color: #A1D214;
+}
+/* кнопки влево и вправо */
+
+.slider__control {
+	top: 50%;
+	z-index: 2;
+	width: 30px;
+	height: 70px;
+	color: #fff;
+	display: flex;
+	position: absolute;
+	text-align: center;
+	border-radius: 5px;
+	align-items: center;
+	text-decoration: none;
+	justify-content: center;
+	transform: translateY(-50%);
+	background: rgba(255, 255, 255, 1);
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.slider__control_hide {
+	display: none;
+}
+
+.slider__control[data-slide="prev"] {
+	left: 0;
+}
+
+.slider__control[data-slide="next"] {
+	right: 0;
+}
+
+.slider__control:hover,
+.slider__control:focus {
+	color: #fff;
+	text-decoration: none;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+	background: rgba(255, 255, 255, 1);
+	outline: 0;
+}
+
+.slider__control::before {
+	content: "";
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background: transparent no-repeat center center;
+	background-size: 100% 100%;
+}
+
+.slider__control[data-slide="prev"]::before {
+	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%53000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+}
+
+.slider__control[data-slide="next"]::before {
+	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%53000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+}
+
+/* индикаторы */
+
+.slider__indicators {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 15;
+	display: flex;
+	justify-content: center;
+	list-style: none;
+}
+
+.slider__indicators li {
+	flex: 0 1 auto;
+	z-index: 10;
+	box-sizing: content-box;
+	width: 30px;
+	height: 50px;
+	margin-right: 3px;
+	margin-left: 3px;
+	text-indent: -999px;
+	background-color: rgba(255, 0, 0, 0.5);
+	background-clip: padding-box;
+	border-top: 15px solid transparent;
+	border-bottom: 15px solid transparent;
+	cursor: pointer;
+}
+
+.slider__indicators li.active {
+	background-color: rgba(0, 0, 0, 0.9);
+}
