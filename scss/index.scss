@@ -99,7 +99,7 @@ main{
     justify-content: center;
     background-size: 100% 100%;
     font-family: Quicksand, Nunito;
-    background-image: url("../images/backgrounds/about.jpg");
+    background-image: url("../images/backgrounds/about.avif");
     border: 2px solid rgba(0, 0, 0, 0.709);
 }
 .about_header{
@@ -132,7 +132,7 @@ main{
     display: flex;
     background-size: 100% 100%;
     background-position: center;
-    background-image: url("../images/backgrounds/technologies.jpg");
+    background-image: url("../images/backgrounds/technologies.avif");
 }
 .technologies{
     width: 400px;
@@ -313,7 +313,7 @@ a{
         background-size: 240% 100%;
         background-position: center;
         background-repeat: no-repeat;
-        background-image: url("../images/backgrounds/hello_img.jpg");
+        background-image: url("../images/backgrounds/hello_img.avif");
     }
     .hello_block{
         width: 72%;
