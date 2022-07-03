@@ -131,12 +131,13 @@
 </body>
 <script src="js/jquery-3.6.0.min.js"></script>
 <script>
-        new ChiefSlider('.slider',{
-            loop: true,
-            autoplay: false,
-            swipe: true,
-            refresh: false
-        });
+    $('.technology_discription')[0].style.display = 'flex';
+    new ChiefSlider('.slider',{
+        loop: true,
+        autoplay: false,
+        swipe: true,
+        refresh: false
+    });
     document.addEventListener('keydown', function scroll(element){
         if(element.key == 'ArrowUp' || element.key == 'ArrowDown'){
             element.preventDefault();
