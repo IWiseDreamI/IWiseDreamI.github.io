@@ -19,11 +19,13 @@
 }
 
 .slider__wrapper {
-	width: 92%;
+	width: 90%;
+	height: 100%;
 	overflow: hidden;
 }
 
 .slider__items {
+	height: 100%;
 	display: flex;
 	transition: transform 0.5s ease;
 }
@@ -33,12 +35,20 @@
 }
 
 .slider__item {
+	height: 100%;
+	display: flex;
 	flex: 0 0 50%;
 	max-width: 50%;
 	user-select: none;
+	justify-content: center;
 }
-
-/* кнопки влево и вправо */
+.slider__item-content{
+	width: 90%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
 
 .slider__control {
 	position: absolute;
@@ -47,10 +57,11 @@
 	justify-content: center;
 	align-items: center;
 	width: 40px;
-	height: 95%;
+	height: 60px;
 	color: #fff;
+	border-radius: 10px;
 	text-align: center;
-	background: rgb(0 0 0 / 20%);
+	background: rgb(0 0 0 / 50%);
 	transform: translateY(-50%);
 }
 
