@@ -1361,7 +1361,7 @@ h3 {
     overflow-x: hidden;
   }
 
-  .header__info, .header__catalog-btn, .header__search-form, .header__option-sale, .header__option p, aside, .preference__text, .aside-menu, .lime-news__section-text, .lime-news__text-shadow, .aside-menu__product-type, footer {
+  .header__info, .header__catalog-btn, .header__search-form, .header__option-sale, .header__option p, aside, .preference__text, .lime-news__section-text, .lime-news__text-shadow, footer {
     display: none;
   }
 
@@ -1721,5 +1721,39 @@ h3 {
 
   .food-item__option {
     width: 90%;
+  }
+
+  .aside-menu__product-type {
+    top: 8vh;
+    z-index: 5;
+    width: 100vw;
+    height: 92vh;
+    position: fixed;
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+
+  .aside-menu {
+    top: 8vh;
+    z-index: 5;
+    width: 100vw;
+    height: 92vh;
+    position: fixed;
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+
+  .aside-menu__product-type-close {
+    top: 30px;
+    right: 30px;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    background-size: 100% 100%;
+    background-image: url("../images/header/mobile_cross.svg");
+  }
+
+  .mobile-catalog-close-btn {
+    display: none;
   }
 }

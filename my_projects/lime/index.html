@@ -68,7 +68,8 @@
                 <img src="images/header/arrow_down.svg" alt="">
             </div>
             <div class="mobile-header-left mobile">
-                <img src="images/header/mobile_catalog.svg" alt="" class="mobile mobile-catalog">    
+                <img src="images/header/mobile_catalog.svg" alt="" class="mobile mobile-catalog-btn">
+                <img src="images/header/mobile_cross.svg" alt="" class="mobile mobile-catalog-close-btn">    
                 <img src="images/header/procent.svg" alt="" class="mobile mobile-sale">
             </div>
             <img src="images/header/mobile_logo.svg" alt="" class="mobile mobile-logo">
@@ -809,6 +810,7 @@
             </div>
         </div>
         <div class="aside-menu__product-type">
+            <div class="aside-menu__product-type-close mobile"></div>
             <p class="aside-menu__product-type-header">Акционные товары</p>
             <div class="aside-menu__product-type-content">
                 <p>Молоко</p>
@@ -823,6 +825,7 @@
             </div>
         </div>
         <div class="aside-menu__product-type">
+            <div class="aside-menu__product-type-close mobile"></div>
             <p class="aside-menu__product-type-header">Собственное производство</p>
             <div class="aside-menu__product-type-content">
                 <p>Молоко</p>
@@ -837,6 +840,7 @@
             </div>
         </div>
         <div class="aside-menu__product-type">
+            <div class="aside-menu__product-type-close mobile"></div>
             <p class="aside-menu__product-type-header">Бакалея</p>
             <div class="aside-menu__product-type-content">
                 <p>Молоко</p>
@@ -851,6 +855,7 @@
             </div>
         </div>
         <div class="aside-menu__product-type">
+            <div class="aside-menu__product-type-close mobile"></div>
             <p class="aside-menu__product-type-header">Мясо и рыба</p>
             <div class="aside-menu__product-type-content">
                 <p>Молоко</p>
@@ -865,6 +870,7 @@
             </div>
         </div>
         <div class="aside-menu__product-type">
+            <div class="aside-menu__product-type-close mobile"></div>
             <p class="aside-menu__product-type-header">Молочные продукты</p>
             <div class="aside-menu__product-type-content">
                 <p>Молоко</p>
@@ -879,6 +885,7 @@
             </div>
         </div>
         <div class="aside-menu__product-type">
+            <div class="aside-menu__product-type-close mobile"></div>
             <p class="aside-menu__product-type-header">Фрукты и овощи</p>
             <div class="aside-menu__product-type-content">
                 <p>Молоко</p>
@@ -893,6 +900,7 @@
             </div>
         </div>
         <div class="aside-menu__product-type">
+            <div class="aside-menu__product-type-close mobile"></div>
             <p class="aside-menu__product-type-header">Замороженные продукты</p>
             <div class="aside-menu__product-type-content">
                 <p>Молоко</p>
@@ -907,6 +915,7 @@
             </div>
         </div>
         <div class="aside-menu__product-type">
+            <div class="aside-menu__product-type-close mobile"></div>
             <p class="aside-menu__product-type-header">Вода, соки, напитки</p>
             <div class="aside-menu__product-type-content">
                 <p>Молоко</p>
@@ -921,6 +930,7 @@
             </div>
         </div>
         <div class="aside-menu__product-type">
+            <div class="aside-menu__product-type-close mobile"></div>
             <p class="aside-menu__product-type-header">Хлеб, кондитерские изделия</p>
             <div class="aside-menu__product-type-content">
                 <p>Молоко</p>
@@ -935,6 +945,7 @@
             </div>
         </div>
         <div class="aside-menu__product-type">
+            <div class="aside-menu__product-type-close mobile"></div>
             <p class="aside-menu__product-type-header">Чай, кофе</p>
             <div class="aside-menu__product-type-content">
                 <p>Молоко</p>
@@ -949,6 +960,7 @@
             </div>
         </div>
         <div class="aside-menu__product-type">
+            <div class="aside-menu__product-type-close mobile"></div>
             <p class="aside-menu__product-type-header">Здоровое питание</p>
             <div class="aside-menu__product-type-content">
                 <p>Молоко</p>
@@ -963,6 +975,7 @@
             </div>
         </div>
         <div class="aside-menu__product-type">
+            <div class="aside-menu__product-type-close mobile"></div>
             <p class="aside-menu__product-type-header">Детское питание</p>
             <div class="aside-menu__product-type-content">
                 <p>Молоко</p>
@@ -977,6 +990,7 @@
             </div>
         </div>
         <div class="aside-menu__product-type">
+            <div class="aside-menu__product-type-close mobile"></div>
             <p class="aside-menu__product-type-header">Товары восточной кухни</p>
             <div class="aside-menu__product-type-content">
                 <p>Молоко</p>
@@ -991,6 +1005,7 @@
             </div>
         </div>
         <div class="aside-menu__product-type">
+            <div class="aside-menu__product-type-close mobile"></div>
             <p class="aside-menu__product-type-header">Бытовая химия, хозтовары</p>
             <div class="aside-menu__product-type-content">
                 <p>Молоко</p>
@@ -1005,6 +1020,7 @@
             </div>
         </div>
         <div class="aside-menu__product-type">
+            <div class="aside-menu__product-type-close mobile"></div>
             <p class="aside-menu__product-type-header">Зоотовары</p>
             <div class="aside-menu__product-type-content">
                 <p>Молоко</p>
@@ -1097,6 +1113,32 @@
             swipe: true
         });
     }
+    if (document.documentElement.clientWidth <= 425){
+        $('.mobile-catalog-btn')[0].addEventListener('click', function(){
+            $('.body')[0].style.overflowY = 'hidden';
+            $('.aside-menu')[0].style.transform = 'translateX(0%)';
+            $('.mobile-catalog-btn')[0].style.display = 'none';
+            $('.mobile-catalog-close-btn')[0].style.display = 'block';
+        })
+        $('.mobile-catalog-close-btn')[0].addEventListener('click', function(){
+            $('.aside-menu')[0].style.transform = 'translateX(-100%)';
+            for(let i = 0; i < $('.aside-menu__product-type').length; i++){
+                $('.aside-menu__product-type')[i].style.transform = 'translateX(-100%)';
+            }
+            $('.mobile-catalog-btn')[0].style.display = 'block';
+            $('.mobile-catalog-close-btn')[0].style.display = 'none';
+        })
+        for(let i = 0; i < $('.aside-menu__list-object').length; i++){
+            $('.aside-menu__list-object')[i].addEventListener('click', function(){    
+                $('.aside-menu__product-type')[i].style.transform = 'translateX(0%)';
+            })
+        }
+        for(let i = 0; i < $('.aside-menu__list-object').length; i++){
+            $('.aside-menu__product-type-close')[i].addEventListener('click', function(){
+                $('.aside-menu__product-type')[i].style.transform = 'translateX(-100%)';
+            })
+        }
+    }
     if(window.innerWidth > 1000){
         $('.header__catalog-btn')[0].addEventListener('click', function(){
             $('.dark-blur')[0].style.display = 'block';
@@ -1104,7 +1146,19 @@
             $('.body')[0].style.overflowY = 'hidden';
             $('.dark-blur')[0].style.opacity = '1';
             $('.aside-menu')[0].style.transform = 'translateX(0%)';
-        })
+        })    
+        for(let i = 0; i < $('.aside-menu__list-object').length; i++){
+            $('.aside-menu__list-object')[i].addEventListener('click', function(){
+                $('.aside-menu__list-object')[i].style.backgroundColor = '#A1D214';    
+                $('.aside-menu__product-type')[i].style.transform = 'translateX(100%)';
+                for(let x = 0; x < $('.aside-menu__list-object').length; x++){
+                    if (x != i){
+                        $('.aside-menu__product-type')[x].style.transform = 'translateX(-100%)';
+                        $('.aside-menu__list-object')[x].style.backgroundColor = 'rgba(0,0,0,0)';
+                    }
+                }
+            })
+        }
     }
     $('.dark-blur')[0].addEventListener('click', function(){
         $('.body')[0].style.overflowY = 'auto';
@@ -1116,18 +1170,6 @@
             $('.aside-menu__product-type')[x].style.transform = 'translateX(-100%)';
         }
     })
-    for(let i = 0; i < $('.aside-menu__list-object').length; i++){
-        $('.aside-menu__list-object')[i].addEventListener('click', function(){
-            $('.aside-menu__list-object')[i].style.backgroundColor = '#A1D214';    
-            $('.aside-menu__product-type')[i].style.transform = 'translateX(100%)';
-            for(let x = 0; x < $('.aside-menu__list-object').length; x++){
-                if (x != i){
-                    $('.aside-menu__product-type')[x].style.transform = 'translateX(-100%)';
-                    $('.aside-menu__list-object')[x].style.backgroundColor = 'rgba(0,0,0,0)';
-                }
-            }
-        })
-    }
     $('.review__user-comment').each(function(i){
         text_len = $(this).text().length;
         text = $(this).text();
@@ -1167,7 +1209,7 @@
             $('.header__option')[i].style.borderBottom = 'solid 3px #A1D214';
             switch(i){
                 case 0:
-                    alert('Похуй, я блок пока не написал')
+                    alert('Блока нет')
                     break
                 case 1:
                     $('.aside-favorite')[0].style.display = 'flex';
