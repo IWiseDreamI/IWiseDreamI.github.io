@@ -3,6 +3,7 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: Nunito;
 }
 
 main {
@@ -316,10 +317,12 @@ footer {
 h2 {
   color: #fff;
   font-size: 2.2vw;
+  font-family: Nunito;
 }
 
 h4 {
   font-size: 1.3vw;
+  font-family: Nunito;
   color: rgb(210, 210, 210);
 }
 
