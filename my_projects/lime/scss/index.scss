@@ -873,6 +873,10 @@ h3{
     display: none;
 }
 @media (max-width: 425px){
+    *{
+        outline: none;
+        -webkit-tap-highlight-color: transparent;
+    }
     body{
         width: 100vw;
         overflow-x: hidden;
@@ -886,6 +890,7 @@ h3{
     header{
         height: 8vh;
         width: 100%;
+        user-select: none;
         box-shadow: 0px 7px 10px 0px rgba(0, 0, 0, 0.2);
     }
     .mobile-header-left{
