@@ -203,6 +203,12 @@ header{
     align-items: center;
     justify-content: space-between;
 }
+.header__options-block{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+}
 .header__option{
     height: 95%;
     margin: 0.8%;
@@ -223,10 +229,13 @@ aside{
     z-index: 5;
     width: 16vw;
     height: 100%;
+    position: relative;
     margin-left: auto;
+    margin-bottom: auto;
 	box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.1);
 }
 .aside-basket{
+    top: 0;
     height: 84vh;
     display: flex;
     position: absolute;
@@ -437,8 +446,8 @@ main{
     z-index: 4;
     width: 100vw;
     height: 100vh;
-    transition: opacity 0.6s;
     position: absolute;
+    transition: opacity 0.6s;
     background-color: rgba(40, 40, 40, 0.75);
 }
 .main__slider{
@@ -465,7 +474,7 @@ main{
     transform: translate(30%, -120%);
 }
 .preference__content{
-    z-index: 1;
+z-index: 1;    height: 30%;
     width: 100%;
     height: 100%;
 }
@@ -697,12 +706,20 @@ main{
     font-size: 14px;
     align-items: center;
 }
+.food-receipts__header-content{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.food-receipt__header-link{
+    display: none;
+}
 .food-receipts__header{
     padding: 5px 0px;
     border-bottom: 4px #A1D214 solid;
 }
 .food-receipts__header-text{
-    width: 56%;
+    width: 100%;
     margin-left: auto;
 }
 .food-item__option{
@@ -839,6 +856,7 @@ footer{
 }
 ::-webkit-scrollbar {
     width: 4px;
+    height: 3px;
     background-color: #ffffff;
 }
 ::-webkit-scrollbar-thumb {
@@ -850,4 +868,243 @@ div{
 }
 h3{
     font-size: 18px;
+}
+.mobile{
+    display: none;
+}
+@media (max-width: 425px){
+    body{
+        width: 100vw;
+        overflow-x: hidden;
+    }
+    .header__info, .header__catalog-btn, .header__search-form,.header__option-sale, .header__option p, aside, .preference__text, .aside-menu, .lime-news__section-text, .lime-news__text-shadow, .aside-menu__product-type, footer{
+        display: none;
+    }
+    .mobile{
+        display: block;
+    }
+    header{
+        height: 8vh;
+        width: 100%;
+        box-shadow: 0px 7px 10px 0px rgba(0, 0, 0, 0.2);
+    }
+    .mobile-header-left{
+        width: 40%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .header__options{
+        width: 100%;
+        height: 100%;
+        align-items: flex-start;
+        justify-content: space-around;
+    }
+    .header__options-block{
+        width: 40%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+    main{ 
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .mobile-search-form{
+        width: 90%;
+        height: 5vh;
+        display: flex;
+        margin-top: 5vh;
+        position: relative;
+        align-items: center;
+    }
+    .mobile-search-form-input{
+        width: 100%;
+        height: 90%;
+        border: none;
+        outline: none;
+        padding: 0% 5%;
+        border-radius: 10px;
+        background-color: #F1F1F1;
+    }
+    .mobile-search-form-img{
+        right: 5%;
+        position: absolute;
+    }
+    .main__slider{
+        width: 100%;
+    }
+    .slider {
+        width: 100%;
+        overflow: hidden;
+    }
+    .info-slider__container {
+        width: 84%;
+        overflow: visible;
+        border-radius: 10px;
+    }
+    .slider__item img{
+        width: 90%;
+        border-radius: 20px;
+    }
+    .preferences{
+        width: 100%;
+        height: 12vh;
+        margin-top: 3vh;
+    }
+    .preference{
+        width: 22%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-content:  center;
+        justify-content: center;
+    }
+    .preference__content{
+        height: 30%;
+        display: flex;
+        font-size: 3vw;
+        align-items: center;
+    }
+    .preference__header{ 
+        text-align: center;
+    }
+    .preference img{
+        transform: translate(0%, 0%);
+    }
+    .lime-news{
+        height: auto;
+    }
+    .lime-news__header{
+        width: 38%;
+        font-size: 4vw;
+    }
+    .lime-news__sections{
+        overflow-x: scroll;
+    }
+    .lime-news__sections::-webkit-scrollbar{
+        height: 3px;
+        background-color: #C7C7C7;
+    }
+    .lime-news__sections::-webkit-scrollbar-thumb{
+        border-radius: 2px; 
+    }
+    .lime-news__section{
+        margin: 10px;
+        flex: 0 0 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .lime-news__text{
+        height: auto;
+    }
+    .lime-news__section-header{
+        font-size: 18px;
+        font-weight: bold;
+    }
+    .lime-news__section a{
+        position: relative;
+    }
+    .product-slider__container{
+        overflow-x: scroll;
+    }
+    .product{
+        width: 36%;
+        height: auto;
+        padding: 2% 0;
+        flex: 0 0 36%;
+        max-width: 36%;    
+    }    
+    .product img{
+        width: auto;
+        height: auto;
+    }
+    .products__slider .slider__control{
+        display: none;
+    }
+    .products__header{
+        width: auto;
+        font-size: 4vw;
+    }
+    .reviews{
+        height: auto;
+        display: flex;
+        overflow: hidden;
+        flex-direction: column;
+    }
+    .review-info{
+        width: 90%;
+        display: flex;
+        margin-top: 5%;
+        flex-direction: row;
+    }
+    .review{
+        width: 90%;
+    }
+    .review__link{
+        transform: translate(-200%, 70%);
+    }
+    .food-block{
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+    .cook-interview{
+        width: 100%;
+        height: 30vh;
+        border-radius: 10px;
+        background-position: center;
+        background-size: 100% 170%;
+    }
+    .food-receipts{
+        box-shadow: none;
+    }
+    .food-receipts__header-block{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .food-receipts__header-content{
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+    .food-receipt__header-link{
+        display: block;
+        color: #333333;
+        font-weight: bold;
+        margin-left: auto;
+        margin-right: 10%;
+        text-decoration: none;
+    }
+    .food-receipts__header-text{
+        width: 60%;
+        margin-top: 10px;
+        margin-left: 0;
+        font-weight: bold;
+        margin-right: auto;
+    }
+    .food-receipts{
+        width: 100%;
+    }
+    .food-receipts__slider{
+        width: 100%;
+    }
+    .food-item{
+        padding: 0;
+        display: flex;
+        flex: 0 0 100%;
+        max-width: 100%;
+        align-items: center;
+    }
+    .food-slider__container{
+        overflow: visible;
+    }
+    .food-item__option{
+        width: 90%;
+    }
 }
