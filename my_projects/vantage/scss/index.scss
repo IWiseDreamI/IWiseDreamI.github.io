@@ -11,11 +11,14 @@ header{
     height: 8vh;
     display: flex;
     margin-left: auto;
+    position: relative;
     background-color: #141414;
 }
 .header-logo{
+    left: -1px;
     z-index: 1;
     height: 200%;
+    position: absolute;
 }
 nav{
     width: 40%;
@@ -267,7 +270,9 @@ nav a{
     background-color: #000;
 }
 .house-block img{
-    width: 100%;
+    min-width: 100%;
+    min-height: 90%;
+    max-height: 100%;
 }
 .house-block__section{
     right: 0;
@@ -346,6 +351,9 @@ nav a{
     font-size: 2vw;
 }
 .service__content{
+    font-size: 1.2vw;
+}
+.service__content{
     height: 60%;
     display: flex;
     align-items: center;
@@ -374,6 +382,9 @@ nav a{
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+.company-logo{
+    width: 16%;
 }
 footer{
     height: 50vh;
@@ -453,4 +464,21 @@ h1, h2, h3, h4{
 }
 ::-webkit-scrollbar-thumb {
     background-color: rgb(0, 0, 0);
+}
+@media (max-width: 1024px){
+    .houses-screen{
+        height: 50vh;  
+    }
+    .house-block{
+        height: 90%;
+    }
+    .about__news-header p, .about__content-text p, .service__content, .home-content__content p{
+        font-size: 1.4vw;
+    }
+    .service__header-text h4, .house-block__name, .about__news-content{
+        font-size: 2.4vw;
+    }
+    .home-content__content{
+        height: 45%;
+    }
 }

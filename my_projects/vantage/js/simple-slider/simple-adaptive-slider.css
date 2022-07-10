@@ -28,14 +28,15 @@
 
 /* стили для элементов */
 .itcss__item {
+  display: flex;
   flex: 0 0 100%;
   max-width: 100%;
   position: relative;
+  align-items: center;
 }
 .itcss__item img{
-  bottom: 0;
-  width: 100%;
-  position: absolute;
+  min-width: 100%;
+  min-height: 100%;
 }
 /* кнопки Prev и Next */
 .itcss__control {
