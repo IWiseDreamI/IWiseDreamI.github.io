@@ -4,231 +4,56 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="js/chief-scroll/chief-slider.css">
-    <script src="js/chief-scroll/chief-slider.js"></script>
-    <link rel="stylesheet" href="css/index.css">
     <title>WiseDream</title>
+    <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
     <header>
         <div class="logo">WiseDream</div>
-        <div class="nav-links">
-            <div class="nav-link">Home</div>
-            <div class="nav-link">About</div>
-            <div class="nav-link">Technologies</div>
-            <div class="nav-link">Projects</div>
-        </div>
-        <div class="socials">
-            <div class="social">
-                <a href="https://discord.com/users/WiseDream#1662/"><img src="images/socials/discord.svg" alt="" class="social__img"></a>
-            </div>
-            <div class="social">
-                <a href="https://t.me/Wise_Dream"><img src="images/socials/telegram.svg" alt="" class="social__img"></a>
-            </div>
-            <div class="social">
-                <a href="https://github.com/IWiseDreamI"><img src="images/socials/github.svg" alt="" class="social__img"></a>
+        <div class="header__content">
+            <nav>
+                <div class="nav__link nav__link-hover">Home</div>
+                <div class="nav__link">About</div>
+                <div class="nav__link">Technologies</div>
+                <div class="nav__link">Projects</div>
+            </nav>
+            <div class="socials">
+                <a href="https://discord.com/users/WiseDream#1662/"><img src="images/socials/discord.svg" class="social"></a>
+                <a href="https://github.com/IWiseDreamI"><img src="images/socials/github.svg" class="social"></a>
+                <a href="https://t.me/Wise_Dream"><img src="images/socials/telegram.svg" class="social"></a>
             </div>
         </div>
     </header>
     <main>
-        <div class="home screen-block anchor">
-            <div class="home__content">
-                <h4>Сайт-портфолио верстальщика WiseDream</h4><br>
-                <h2>Веб-разработка и верстка сайтов по макетам</h2>
-            </div>
+        <div class="home screen">
+            <canvas id="canvas"></canvas>
         </div>
-        <div class="about screen-block anchor">
-            <div class="about__content">
-                <h2>About</h2>
-                <div class="about__text">
-                    <p>Здравствуйте, я верстальщик и начинающий веб-разработчик.</p><p>Могу сверстать макеты низкой, средней и выше среднего сложностей, оптимизировать сайт (pagespeed).</p><p>Вёрстка адаптивна (при наличии соответсвующего макета) и кроссбраузерна.</p><p>Для вёрстки использую HTML, CSS, SASS, JS, JQuery.</p>
-                </div>
-            </div>
+        <div class="about screen">
         </div>
-        <div class="technologies screen-block anchor">
-            <div class="technologies-discriptions">
-                <div class="technology">
-                    <h3 class="technology__header">HTML</h3>
-                    <p class="technology__content">HTML - это не язык программирования, это язык гипертекстовой разметки, он используетя для сообщения браузеру, как отображать веб-страницы, которые вы посещаете. Он может быть сложным или простым, в зависимости от желания веб-дизайнера. HTML состоит из ряда элементов, которые используются для вложения и оборачивания различных частей контента, для его отображения и различного поведения.</p>
-                </div>
-                <div class="technology">
-                    <h3 class="technology__header">CSS</h3>
-                    <p class="technology__content">Как и HTML, CSS на самом деле не является языком программирования, это язык таблицы стилей. Это означает, что он позволяет выборочно применять стили к элементам в документах HTML, задавая элементам например: цвета, размеры, позиционирование и определенное поведение.</p>
-                </div>
-                <div class="technology">
-                    <h3 class="technology__header">Sass</h3>
-                    <p class="technology__content">Sass — это метаязык (язык для описания другого языка), который упрощает и ускоряет написание CSS-кода. Его часто называют препроцессором CSS — это означает, что Sass имеет свой синтаксис, из которого генерирует CSS-код, понятный любому браузеру.</p>
-                </div>
-                <div class="technology">
-                    <h3 class="technology__header">JavaScript</h3>
-                    <p class="technology__content">JavaScript это язык, который позволяет вам применять сложные вещи на web странице — каждый раз, когда на web странице происходит что-то большее, чем просто её статичное отображение — отображение периодически обновляемого контента, или интерактивных карт, или анимация 2D/3D графики, или прокрутка видео в проигрывателе, и т.д. — можете быть уверены, что скорее всего, не обошлось без JavaScript.</p>
-                </div>
-                <div class="technology">
-                    <h3 class="technology__header">JQuery</h3>
-                    <p class="technology__content">jQuery — набор функций JavaScript, фокусирующийся на взаимодействии JavaScript и HTML. Библиотека jQuery помогает легко получать доступ к любому элементу DOM, обращаться к атрибутам и содержимому элементов DOM, манипулировать ими. Также библиотека jQuery предоставляет удобный API для работы с AJAX.</p>
-                </div>
-                <div class="technology">
-                    <h3 class="technology__header">Github</h3>
-                    <p class="technology__content">GitHub — это сервис для совместной разработки и хостинга проектов. C помощью GitHub над кодом проекта может работать неограниченное количество программистов из любых точек мира. В GitHub есть система контроля (управления) версий Git: сервис позволяет просматривать и контролировать любые изменения кода любым разработчиком и возвращаться к состоянию до изменений.</p>
-                </div>
-                <div class="technology">
-                    <h3 class="technology__header">Git</h3>
-                    <p class="technology__content">Git — система управления версиями с распределенной архитектурой. В отличие от некогда популярных систем вроде CVS и Subversion (SVN), где полная история версий проекта доступна лишь в одном месте, в Git каждая рабочая копия кода сама по себе является репозиторием. Это позволяет всем разработчикам хранить историю изменений в полном объеме.</p>
-                </div>
-                <div class="technology">
-                    <h3 class="technology__header">Figma</h3> 
-                    <p class="technology__content">Figma — это графический онлайн-редактор для совместной работы. В нём можно создать прототип сайта, интерфейс приложения и обсудить правки с коллегами в реальном времени.</p>
-                </div>
-                <div class="technology">
-                    <h3 class="technology__header">VS Code</h3>
-                    <p class="technology__content">Visual Studio Code (VS Code) — редактор исходного кода, разработанный Microsoft для Windows, Linux и macOS. Позиционируется как «лёгкий» редактор кода для кроссплатформенной разработки веб- и облачных приложений. Включает в себя отладчик, инструменты для работы с Git, подсветку синтаксиса, IntelliSense и средства для рефакторинга. Имеет широкие возможности для кастомизации: пользовательские темы, сочетания клавиш и файлы конфигурации.</p>
-                </div>
+        <div class="technologies screen">
+            <div class="technologies__block">
+                <img src="images/technologies/html5.svg" alt="html5" class="technology__icon">
+                <img src="images/technologies/css3.svg" alt="css3" class="technology__icon">
+                <img src="images/technologies/sass.svg" alt="sass" class="technology__icon">
+                <img src="images/technologies/gulp.svg" alt="gulp" class="technology__icon">
+                <img src="images/technologies/js.svg" alt="js" class="technology__icon">
+                <img src="images/technologies/react.svg" alt="react" class="technology__icon">
+                <img src="images/technologies/node.svg" alt="node" class="technology__icon">
+                <img src="images/technologies/figma.svg" alt="figma" class="technology__icon">
+                <img src="images/technologies/git.svg" alt="git" class="technology__icon">
             </div>
-            <div class="technologies-icons">
-                <img src="images/technologies/html5.svg" class="technology-icon">
-                <img src="images/technologies/css3.svg" class="technology-icon">
-                <img src="images/technologies/sass.svg" class="technology-icon">
-                <img src="images/technologies/js.svg" class="technology-icon">
-                <img src="images/technologies/jquery.svg" class="technology-icon">
-                <img src="images/technologies/git.svg" class="technology-icon">
-                <img src="images/technologies/github.svg" class="technology-icon">
-                <img src="images/technologies/figma.svg" class="technology-icon">
-                <img src="images/technologies/vscode.svg" class="technology-icon">
-            </div>
+
+            <div class="technology__discription">
+                HTML (от англ. HyperText Markup Language — «язык гипертекстовой разметки») — стандартизированный язык гипертекстовой разметки документов для просмотра веб-страниц в браузере. Веб-браузеры получают HTML документ от сервера по протоколам HTTP/HTTPS или открывают с локального диска, далее интерпретируют код в интерфейс, который будет отображаться на экране монитора.
+            </div>            
+
         </div>
-        <div class="projects screen-block anchor">
-            <div class="projects_slider slider">
-                <div class="slider__wrapper">
-                    <div class="slider__items">
-                        <div class="slider__item">
-                            <div class="slider__item-content">
-                                <a href="my_projects/lime/index.html" class="project">
-                                    <h3 class="project__name">Интернет-магазин лайм</h3>
-                                    <div class="project__img lime-img"></div>
-                                </a>
-                                <a href="my_projects/vantage/index.html" class="project">
-                                    <h3 class="project__name">Vantage</h3>
-                                    <div class="project__img vantage-img"></div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="slider__item">
-                            <div class="slider__item-content">
-                                <a href="" class="project">
-                                    <h3 class="project__name">Нет работы</h3>
-                                    <div class="project__img"></div>
-                                </a>
-                                <a href="" class="project">
-                                    <h3 class="project__name">Нет работы</h3>
-                                    <div class="project__img"></div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="slider__item">
-                            <div class="slider__item-content">
-                                <a href="" class="project">
-                                    <h3 class="project__name">Нет работы</h3>
-                                    <div class="project__img"></div>
-                                </a>
-                                <a href="" class="project">
-                                    <h3 class="project__name">Нет работы</h3>
-                                    <div class="project__img"></div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="slider__item">
-                            <div class="slider__item-content">
-                                <a href="" class="project">
-                                    <h3 class="project__name">Нет работы</h3>
-                                    <div class="project__img"></div>
-                                </a>
-                                <a href="" class="project">
-                                    <h3 class="project__name">Нет работы</h3>
-                                    <div class="project__img"></div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <a class="slider__control slider__control_prev" href="#" role="button" data-slide="prev"></a>
-                <a class="slider__control slider__control_next" href="#" role="button" data-slide="next"></a>
-            </div>
+        <div class="projects screen">
+
         </div>
     </main>
-    <footer>
-        <div class="socials">
-            <div class="social">
-                <a href="https://discord.com/users/WiseDream#1662/"><img src="images/socials/discord.svg" alt="" class="social__img"></a>
-            </div>
-            <div class="social">
-                <a href="https://t.me/Wise_Dream"><img src="images/socials/telegram.svg" alt="" class="social__img"></a>
-            </div>
-            <div class="social">
-                <a href="https://github.com/IWiseDreamI"><img src="images/socials/github.svg" alt="" class="social__img"></a>
-            </div>
-        </div>
-        <p>+79241674599</p>
-        <a href="mailto:Indifferentsomething@gmail.com" class="mail-to-link">Indifferentsomething@gmail.com</a>
-    </footer>
+    <footer></footer>
+<script src="js/index.js"></script>
+<script src="js/home.js"></script>
 </body>
-<script src="js/jquery-3.6.0.min.js"></script>
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        new ChiefSlider('.slider', {
-            loop: true,
-            autoplay: false,
-            swipe: true,
-        });
-    });
-    document.addEventListener('keydown', function(clicked_key){
-        if (clicked_key.key == 'ArrowUp' || clicked_key.key == 'ArrowDown'){
-            clicked_key.preventDefault();
-            if (clicked_key.key == 'ArrowUp'){
-                document.documentElement.scrollBy({top: -window.innerHeight, behavior: 'smooth'});
-            }
-            else if (clicked_key.key == 'ArrowDown'){
-                document.documentElement.scrollBy({top: window.innerHeight, behavior: 'smooth'});
-            }
-        }
-     })
-    $('.technology')[0].style.display = 'block';
-    for(let i = 0; i < $('.technology').length; i++){
-        $('.technology-icon')[i].addEventListener('click', function(){
-            $('.technology')[i].style.display = 'block';
-            for(let x = 0; x < $('.technology').length; x++){
-                if (x!= i){
-                    $('.technology')[x].style.display = 'none';
-                }
-            }
-        })
-    }
-    for(let i = 0; i < $('.nav-link').length; i++){
-        $('.nav-link')[i].addEventListener('click', function(){
-            $('.anchor')[i].scrollIntoView({block: "center", behavior: "smooth"});
-        })
-    }
-    var isMouseDown = 0;
-    document.addEventListener('mousedown', function(){
-        isMouseDown = 1;
-    })
-    document.addEventListener('mouseup', function(){
-        isMouseDown = 0;
-    })
-    let timer = null;
-    function scroll_to_nearest(){
-        if(isMouseDown == 0){
-            let scroll_to_screen = Math.round(window.scrollY/window.innerHeight);
-            $('.anchor')[scroll_to_screen].scrollIntoView({block: "center", behavior: "smooth"});
-        }
-        else{
-            setTimeout('scroll_to_nearest()', 400);
-        }
-    }
-    window.addEventListener('scroll', function() {
-        if(timer !== null) {
-            clearTimeout(timer);        
-        }
-        timer = setTimeout('scroll_to_nearest()', 400);
-    }, false);
-</script>
 </html>

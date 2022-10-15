@@ -1,527 +1,171 @@
 @import url('https://fonts.googleapis.com/css2?family=Courgette&family=Nunito:wght@200;300;400;500;600;700;800;900&family=Quicksand:wght@500&display=swap');
-/*////////////////////////////////////////////////////////////////////////////////////////////////*/
+@import url('https://fonts.googleapis.com/css2?family=Neucha&display=swap');
+//Merienda
 *{
     margin: 0;
     padding: 0;
     font-family: Nunito;
 }
-main{
+body{
     width: 100%;
-}
-/*////////////////////////////////////////////////////////////////////////////////////////////////*/
-header{
-    z-index: 2;
-    width: 100%;
-    height: 60px;
     display: flex;
-    position: fixed;
-    user-select: none;
+    overflow-x: hidden;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.5);
+    flex-direction: column;
+}
+header{
+    width: 90%;
+    z-index: 1;
+    height: 7.5vh;
+    display: flex;
+    padding: 0% 5%;
+    position: fixed;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.50);
+    backdrop-filter: blur(15px) saturate(150%);
 }
 .logo{
+    margin: 5%;
+    z-index: 1;
     color: #fff;
-    cursor: pointer;
     font-size: 1.8vw;
-    margin-left: 10%;
-    font-weight: 800;
     user-select: none;
     font-family: Courgette;
 }
-.nav-links{
-    width: 30%;
+.header__content{
+    width: 60%;
+    display: flex;
+    margin-left: auto;
+    justify-content: space-between;
+}
+nav{
+    width: 60%;
     display: flex;
     color: #fff;
-    cursor: pointer;
-    font-size: 1.2vw;
-    font-weight: 600;
-    margin-left: auto;
-    margin-right: 2.5%;
+    font-weight: 700;
     font-family: Nunito;
-    justify-content: space-around;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav__link{
+    font-size: 1.2vw;
+    cursor: pointer;
+    transition: 0.5s;
+    user-select: none;
+    color:rgba(255, 255, 255, 0.75);
+}
+.nav__link::after{
+    width: 0;
+    content: "";
+    height: 0.2vh;
+    display: block;
+    transition: 0.5s;
+    position: absolute;
+    background-color: #ffffff;
+}
+.nav__link:hover{
+    transform: scale(1.02);
+    color:rgb(255, 255, 255);
+}
+.nav__link:hover:after, .nav__link:focus:after {
+	width: 100%;
+}
+.nav__link-hover{
+    transform: scale(1.02);
+    color:rgb(255, 255, 255);
+}
+.nav__link-hover::after{
+    width: 100%;
+    content: "";
+    height: 0.2vh;
+    display: block;
+    transition: 0.5s;
+    position: absolute;
+    background-color: #fff;
 }
 .socials{
-    width: 15%;
+    width: 25%;
     display: flex;
-    margin-right: 5%;
+    margin-left: auto;
     align-items: center;
     justify-content: space-around;
 }
 .social{
-    width: 2vw;
-    height: 2vw;
+    height: 26px;
 }
-.social__img{
-    width: 2vw;
+main{
+    width: 100%;
 }
-/*////////////////////////////////////////////////////////////////////////////////////////////////*/
-.screen-block{
+.screen{
     width: 100%;
     height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(90, 90, 90);
 }
-/*////////////////////////////////////////////////////////////////////////////////////////////////*/
 .home{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-size: 100% 110%;
-    background-image: url(../images/backgrounds/home.avif);
+    background-position: top;
+    background-size: 100% 120%;
+    background-image: url("../images/backgrounds/about.avif");
 }
-.home__content{
-    width: 30%;
-    display: flex;
-    padding: 5% 5%;
-    font-weight: 600;
-    border-radius: 30px;
-    flex-direction: column;
-    background-color: rgba(0, 0, 0, 0.8);
-    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.8);
-}
-/*////////////////////////////////////////////////////////////////////////////////////////////////*/
-.about{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-size: 100% 100%;
-    background-image: url(../images/backgrounds/about.avif);
-}
-.about__content{
-    width: 65%;
-    height: 45%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.about__content h2{
-    font-size: 5vw;
-    text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.8);
-}
-.about__text{
-    width: 60%;
-    height: 60%;
-    padding: 5%;
-    color: #fff;
-    display: flex;
-    border-radius: 30px;
-    flex-direction: column;
-    justify-content: space-between;
-    background-color: rgba(0, 0, 0, 0.8);
-}
-/*////////////////////////////////////////////////////////////////////////////////////////////////*/
 .technologies{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-size: 100% 100%;
-    background-image: url(../images/backgrounds/technologies.avif);
+    background-position: center;
+    background-size: 100% 120%;
+    background-image: url("../images/backgrounds/technologies.avif");
 }
-.technologies-discriptions{
-    width: 40%;
-}
-.technology{
-    display: none;
-    padding: 20px;
-    font-size: 1.5vw;
-    text-align: center;
-    font-family: Nunito;
-    border-radius: 20px;
-    border: 5px double #000;
-    background-color: rgb(200, 200, 200);
-}
-.technology__header{
-    font-size: 2vw;
-    font-weight: bold;
-    padding-bottom: 10px;
-}
-.technologies-icons{
-    width: 25vw;
-    height: 25vw;
+.technologies__block{
+    width: 30%;
     display: flex;
     flex-wrap: wrap;
+}
+.technology__icon{
+    width: 90px;
+    margin: 15px;
+    padding: 5px;
+    transition: 0.6s;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.225);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.50);
+}
+.technology__icon:first-child{
+    background-color: rgba(255, 255, 255, 0.225);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+.technology__discription{
+    width: 26%;
+    padding: 2%;
+    color: #fff;
+    display: flex;
     margin-left: 5%;
-    align-content: space-between;
-    justify-content: space-between;
-}
-.technology-icon{
-    width: 30%;
-}
-/*////////////////////////////////////////////////////////////////////////////////////////////////*/
-.projects{
-    display: flex;
+    transition: 0.5s;
+    font-size: 1.8vw;
+    text-align: center;
+    font-family: Neucha;
     align-items: center;
-    justify-content: center;
-    background-size: 100% 120%;
-    background-image: url(../images/backgrounds/projects.avif);
-}
-.projects_slider{
-    width: 80%;
-    height: 80%;
-}
-.project{
-	width: 90%;
-	height: 35%;
-	padding: 5%;
-	color: #fff;
-    display: flex;
-    font-size: 1.4vw;
-	overflow: hidden;
-	border-radius: 20px;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-	background-color: rgb(0, 0, 0, 0.9);
-}
-.project__img{
-	width: 80%;
-    height: 80%;
-    overflow: hidden;
-    margin-top: auto;
     border-radius: 20px;
-	background-size: 100%;
-	background-position: center;
-	background-repeat: no-repeat;
-}
-.lime-img{
-	background-image: url('../my_projects/images/lime.avif');
-}
-.vantage-img{
-	background-image: url('../my_projects/images/vantage.avif');
-}
-/*////////////////////////////////////////////////////////////////////////////////////////////////*/
-
-/*////////////////////////////////////////////////////////////////////////////////////////////////*/
-footer{
-    width: 90%;
-    height: 60px;
-    color: #fff;
-    display: flex;
-    padding: 0 5%;
-    font-size: 1.4vw;
-    font-weight: bold;
-    position: absolute;
-    align-items: center;
-    font-family: Nunito;
-    transform: translateY(-100%);
+    justify-content: center;
     background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
-.mail-to-link{
-    color: #fff;
-    margin-left: 5%;
+::-webkit-scrollbar {
+    width: 4px;
+    background: rgb(0, 0, 0);
 }
-/*////////////////////////////////////////////////////////////////////////////////////////////////*/
-h2{
-    color: #fff;
-    font-size: 2.2vw;
-    font-family: Nunito;
+::-webkit-scrollbar-thumb {
+    transition: 0.5s;
+    background: rgb(100, 100, 100);
 }
-h4{
-    font-size: 1.3vw;
-    font-family: Nunito;
-    color: rgb(210, 210, 210);
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(150, 150, 150);
 }
-/*////////////////////////////////////////////////////////////////////////////////////////////////*/
-@media (max-width: 1024px){
-    .logo{
-        font-size: 2.8vw;
-    }
-    .nav-links{
-        width: 40%;
-        font-size: 1.6vw;
-    }
-    .socials{
-        width: 20%;
-    }
-    .social{
-        width: 3vw;
-        height: 3vw;
-    }
-    .social__img{
-        width: 3vw;
-    }
-    .home{
-        background-size: 120% 100%;
-        background-position: center;
-    }
-    .home__content{
-        width: 50%;
-    }
-    .home__content h2{
-        font-size: 3.6vw;
-    }
-    .home__content h4{
-        font-size: 2.2vw;
-    }
-    .about__content{
-        width: 75%;
-        height: 45%;
-    }
-    .about__content h2{
-        font-size: 7vw;
-        text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.8);
-    }
-    .about__text{
-        width: 55%;
-        height: 50%;
-        font-size: 1.5vw;
-    }
-    .technology{
-        font-size: 1.8vw;
-    }
-    .technology__header{
-        font-size: 2vw;
-    }
-    .technologies-icons{
-        width: 30vw;
-        height: 30vw;
-    }
-    .project{
-        font-size: 1.8vw;
-    }
-    .projects_slider{
-        width: 90%;
-        height: 70%;
-    }
-    footer{
-        font-size: 2vw;
-    }
+#canvas{
+    width: 50%;
+    height: 50%;
+    background-color: rgb(0, 0, 0, 0.5);
+    backdrop-filter: blur(15px) saturate(0%);
 }
-@media (max-width: 768px){
-    .logo{
-        font-size: 3.4vw;
-    }
-    .nav-links{
-        width: 40%;
-        font-size: 2vw;
-    }
-    .socials{
-        width: 20%;
-    }
-    .social{
-        width: 3vw;
-        height: 3vw;
-    }
-    .social__img{
-        width: 3vw;
-    }
-    .home{
-        background-size: 140% 100%;
-    }
-    .home__content{
-        width: 60%;
-    }
-    .home__content h2{
-        font-size: 4vw;
-    }
-    .home__content h4{
-        font-size: 2.6vw;
-    }
-    .about__content{
-        width: 85%;
-        height: 50%;
-        flex-direction: column;
-    }
-    .about__content h2{
-        font-size: 10vw;
-    }
-    .about__text{
-        width: 55%;
-        height: 60%;
-        font-size: 2.2vw;
-    }
-    .technology{
-        font-size: 2vw;
-    }
-    .technology__header{
-        font-size: 2.4vw;
-    }
-    .projects{
-        background-size: 150% 100%;
-        background-position: center;
-    }
-    .project{
-        font-size: 2.4vw;
-    }
-    .slider__item{
-        flex: 0 0 100%;
-        max-width: 100%;    
-    }
-    footer{
-        font-size: 2.4vw;
-    }
-}
-@media (max-width: 425px){
-    .logo{
-        font-size: 5vw;
-    }
-    .nav-links{
-        display: none;
-    }
-    .home__content{
-        width: 70%;
-        padding: 5% 10%;
-    }
-    .home__content h2{
-        font-size: 5vw;
-    }
-    .home__content h4{
-        font-size: 3vw;
-    }
-    .socials{
-        width: 40%;
-        margin-left: auto;
-    }
-    .social{
-        width: 5vw;
-        height: 5vw;
-    }
-    .social__img{
-        width: 5vw;
-    }
-    .home{
-        background-size: 300% 100%;
-    }
-    .about{
-        background-size: 200% 100%;
-        background-position: center;
-    }
-    .about__content{
-        width: 90%;
-        height: 50%;
-        flex-direction: column;
-    }
-    .about__content h2{
-        font-size: 14vw;
-    }
-    .about__text{
-        width: 55%;
-        height: 60%;
-        padding: 10%;
-        font-size: 3.2vw;
-    }
-    .technologies{
-        position: relative;
-        background-size: 200% 100%;
-        background-position: center;
-    }
-    .technologies-discriptions{
-        top: 15vh;
-        width: 60%;
-        height: 50%;
-        display: flex;
-        position: absolute;
-        align-items: center;
-        flex-direction: column;
-        justify-content: center;
-    }
-    .technology{
-        width: 100%;
-        font-size: 3vw;
-    }
-    .technology__header{
-        font-size: 5vw;
-    }
-    .technologies-icons{
-        width: 45vw;
-        height: 45vw;
-        bottom: 7.5vh;
-        position: absolute;
-    }
-    .projects{
-        background-size: 250% 100%;
-    }
-    .project{
-        font-size: 3.4vw;
-    }
-    .projects_slider{
-        height: 60%;
-    }
-    footer{
-        font-size: 3vw;
-        justify-content: space-around;
-    }
-    footer .socials{
-        display: none;
-    } 
-    .slider__control{
-        width: 30px;
-        height: 90%;
-    }
-}
-@media (max-width: 375px){
-    .logo{
-        font-size: 5.4vw;
-    }
-    .social{
-        width: 5.6vw;
-        height: 5.6vw;
-    }
-    .social__img{
-        width: 5.6vw;
-    }
-    .technologies-discriptions{
-        top: 15vh;
-        width: 80%;
-        height: 50%;
-        display: flex;
-        position: absolute;
-        align-items: center;
-        flex-direction: column;
-        justify-content: center;
-    }
-    .technology{
-        width: 100%;
-        font-size: 4vw;
-    }
-    .technology__header{
-        font-size: 6vw;
-    }
-    .technologies-icons{
-        width: 55vw;
-        height: 55vw;
-        bottom: 7.5vh;
-        position: absolute;
-    }
-    .projects{
-        background-size: 280% 100%;
-    }
-    footer{
-        font-size: 4vw;
-    }
-}
-@media (max-width: 320px){
-    .logo{
-        font-size: 5.8vw;
-    }
-    .social{
-        width: 6vw;
-        height: 6vw;
-    }
-    .social__img{
-        width: 6vw;
-    }
-    .home__content{
-        width: 80%;
-        padding: 10% 5%;
-        text-align: center;
-        justify-content: center;
-    }
-    .home__content h2{
-        font-size: 6vw;
-    }
-    .home__content h4{
-        font-size: 3.6vw;
-    }
-    .about__text{
-        width: 55%;
-        height: 50%;
-        padding: 10%;
-        font-size: 3.2vw;
-    }
-    .technologies{
-        background-size: 300% 100%;
-    }
-    .projects_slider{
-        height: 50%;
-    }
-
+#canvas_img{
+    display: none;
 }
