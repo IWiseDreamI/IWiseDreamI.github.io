@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Courgette&family=Nunito:wght@200;300;400;500;600;700;800;900&family=Quicksand:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Courgette&family=Nunito:wght@300;400;500;600&family=VT323&family=Quicksand:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Neucha&display=swap");
 * {
   margin: 0;
@@ -15,6 +15,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  font-family: Nunito;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -81,7 +82,6 @@ nav {
 }
 
 .nav__link {
-  font-size: 1.2vw;
   cursor: pointer;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -89,6 +89,7 @@ nav {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  font-size: 16px;
   color: rgba(255, 255, 255, 0.75);
 }
 
@@ -145,89 +146,21 @@ nav {
 
 .social {
   height: 26px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 main {
   width: 100%;
-}
-
-.screen {
-  width: 100%;
-  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  background-color: rgb(90, 90, 90);
-}
-
-.home {
-  background-position: top;
-  background-size: 100% 120%;
-  background-image: url("../images/backgrounds/about.avif");
-}
-
-.technologies {
-  background-position: center;
-  background-size: 100% 120%;
-  background-image: url("../images/backgrounds/technologies.avif");
-}
-
-.technologies__block {
-  width: 30%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-.technology__icon {
-  width: 90px;
-  margin: 15px;
-  padding: 5px;
-  -webkit-transition: 0.6s;
-  transition: 0.6s;
-  border-radius: 10px;
-  background-color: rgba(0, 0, 0, 0.225);
-  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-          box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
-
-.technology__icon:first-child {
-  background-color: rgba(255, 255, 255, 0.225);
-  -webkit-box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-          box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-}
-
-.technology__discription {
-  width: 26%;
-  padding: 2%;
-  color: #fff;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-left: 5%;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  font-size: 1.8vw;
-  text-align: center;
-  font-family: Neucha;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  border-radius: 20px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  background-color: rgba(0, 0, 0, 0.5);
-  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-          box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 ::-webkit-scrollbar {
@@ -245,14 +178,31 @@ main {
   background: rgb(150, 150, 150);
 }
 
+.screen {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.home {
+  background-size: 100% 100%;
+  background-position: center;
+  background-image: url("../images/backgrounds/home.jpg");
+}
+
 #canvas {
   width: 50%;
   height: 50%;
   background-color: rgba(0, 0, 0, 0.5);
   -webkit-backdrop-filter: blur(15px) saturate(0%);
           backdrop-filter: blur(15px) saturate(0%);
-}
-
-#canvas_img {
-  display: none;
 }

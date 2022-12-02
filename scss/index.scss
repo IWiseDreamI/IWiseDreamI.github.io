@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Nunito:wght@200;300;400;500;600;700;800;900&family=Quicksand:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Nunito:wght@300;400;500;600&family=VT323&family=Quicksand:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Neucha&display=swap');
 //Merienda
 *{
@@ -6,13 +6,16 @@
     padding: 0;
     font-family: Nunito;
 }
+
 body{
     width: 100%;
     display: flex;
     overflow-x: hidden;
     align-items: center;
+    font-family: Nunito;
     flex-direction: column;
 }
+
 header{
     width: 90%;
     z-index: 1;
@@ -25,6 +28,7 @@ header{
     background-color: rgba(0, 0, 0, 0.50);
     backdrop-filter: blur(15px) saturate(150%);
 }
+
 .logo{
     margin: 5%;
     z-index: 1;
@@ -33,12 +37,14 @@ header{
     user-select: none;
     font-family: Courgette;
 }
+
 .header__content{
     width: 60%;
     display: flex;
     margin-left: auto;
     justify-content: space-between;
 }
+
 nav{
     width: 60%;
     display: flex;
@@ -48,13 +54,15 @@ nav{
     align-items: center;
     justify-content: space-between;
 }
+
 .nav__link{
-    font-size: 1.2vw;
     cursor: pointer;
     transition: 0.5s;
     user-select: none;
+    font-size: 16px;
     color:rgba(255, 255, 255, 0.75);
 }
+
 .nav__link::after{
     width: 0;
     content: "";
@@ -64,17 +72,21 @@ nav{
     position: absolute;
     background-color: #ffffff;
 }
+
 .nav__link:hover{
     transform: scale(1.02);
     color:rgb(255, 255, 255);
 }
+
 .nav__link:hover:after, .nav__link:focus:after {
 	width: 100%;
 }
+
 .nav__link-hover{
     transform: scale(1.02);
     color:rgb(255, 255, 255);
 }
+
 .nav__link-hover::after{
     width: 100%;
     content: "";
@@ -84,6 +96,7 @@ nav{
     position: absolute;
     background-color: #fff;
 }
+
 .socials{
     width: 25%;
     display: flex;
@@ -91,81 +104,51 @@ nav{
     align-items: center;
     justify-content: space-around;
 }
+
 .social{
     height: 26px;
+    user-select: none;
 }
+
 main{
     width: 100%;
-}
-.screen{
-    width: 100%;
-    height: 100vh;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: rgb(90, 90, 90);
+    flex-direction: column;
 }
-.home{
-    background-position: top;
-    background-size: 100% 120%;
-    background-image: url("../images/backgrounds/about.avif");
-}
-.technologies{
-    background-position: center;
-    background-size: 100% 120%;
-    background-image: url("../images/backgrounds/technologies.avif");
-}
-.technologies__block{
-    width: 30%;
-    display: flex;
-    flex-wrap: wrap;
-}
-.technology__icon{
-    width: 90px;
-    margin: 15px;
-    padding: 5px;
-    transition: 0.6s;
-    border-radius: 10px;
-    background-color: rgba(0, 0, 0, 0.225);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.50);
-}
-.technology__icon:first-child{
-    background-color: rgba(255, 255, 255, 0.225);
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-}
-.technology__discription{
-    width: 26%;
-    padding: 2%;
-    color: #fff;
-    display: flex;
-    margin-left: 5%;
-    transition: 0.5s;
-    font-size: 1.8vw;
-    text-align: center;
-    font-family: Neucha;
-    align-items: center;
-    border-radius: 20px;
-    justify-content: center;
-    background-color: rgba(0, 0, 0, 0.5);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
+
 ::-webkit-scrollbar {
     width: 4px;
     background: rgb(0, 0, 0);
 }
+
 ::-webkit-scrollbar-thumb {
     transition: 0.5s;
     background: rgb(100, 100, 100);
 }
+
 ::-webkit-scrollbar-thumb:hover {
     background: rgb(150, 150, 150);
 }
+
+.screen{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.home{
+    background-size: 100% 100%;
+    background-position: center;
+    background-image: url("../images/backgrounds/home.jpg");
+}
+
 #canvas{
     width: 50%;
     height: 50%;
-    background-color: rgb(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(15px) saturate(0%);
-}
-#canvas_img{
-    display: none;
 }

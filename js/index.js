@@ -1,17 +1,3 @@
-function $(selector){
-    if(selector[0] == '#'){
-        selector = selector.replace('#', '')
-        return document.getElementById(selector)
-    }
-    else if(selector[0] == '.'){
-        selector = selector.replace('.', '')
-        return document.getElementsByClassName(selector)
-    }
-    else{
-        return document.getElementsByTagName(selector)
-    }
-}
-
 window.addEventListener('scroll', function(){
     for(let i = 0; i < $(".screen").length; i++){
         let screen_cords = i * window.innerHeight - window.innerHeight / 3;
