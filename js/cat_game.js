@@ -22,6 +22,8 @@ let character = {
 };
 
 let jump = 0;
+let coldown = 100;
+let obstacles = [];
 ////////////////////////////////////////////////////////////////////////////
 
 const textFlick = () => {
@@ -37,6 +39,7 @@ const textFlick = () => {
 }
 
 const start_menu = () => {
+    window.addEventListener("keydown", press_start)
     ctx.fillStyle = "#ffffff";
     ctx.font = "600 30px VT323"
     ctx.letterSpacing = "3px";
@@ -63,8 +66,6 @@ const press_start = (event) => {
     }
 }
 
-window.addEventListener("keydown", press_start)
-
 const press_jump = (event) => {
     if(event.code == "Space" && jump == 0){
         jump += 1;
@@ -81,29 +82,103 @@ const start = () => {
     game_process = setInterval(game_frame, 20); game_process;
 }
 
-const game_frame = () => {
+const game_frame = () => {    
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    // Jump
     let character_height = usual_height - jump;
-    if(jump > 0 && direction == 0 && character_height > usual_height - 80){
-        jump += 3;
+
+    if(jump > 0 && direction == 0 && character_height > usual_height - 100){
+        jump += 3.5;
     }
-    else if(direction == 0 && character_height < usual_height - 80){
+    else if(direction == 0 && character_height < usual_height - 100){
         direction = 1;
     }
-    else if(jump > 0 && character_height < usual_height){
-        jump -= 3.5;
+    else if(jump >= 0 && character_height < usual_height){
+        jump -= 3.9;
     }
-    else if(jump < 0){
+    else if(jump <= 0){
         jump = 0;
         direction = 0;
     }
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    let animation_iteration = dev(game_iteration, 16)  % 2;   
+
+    // Obstacles
+    if(random(1, 100) > 98 && coldown <= 0) {
+        obstacles.push(canvas.width + 20)
+        coldown = 60;
+    }
+
+    obstacles = obstacles.map((obstacle) => {
+        ctx.fillRect(obstacle, canvas.height - 80, -20, 60);
+        return obstacle - 3.6;
+    })
+
+    obstacles.forEach((obstacle) => {
+        if(obstacle + 40 < 0){
+            obstacles.shift();
+        }
+        if(obstacle > 60 && obstacle < 120 && character_height > usual_height - 50){
+            clearInterval(game_process);
+            death();
+        }
+    })
+
+    // Draw
+    let animation_iteration = dev(game_iteration, 12)  % 2;
+
     if(animation_iteration == 1){
         ctx.drawImage(character.first_frame, 50, character_height, 60, 60);
     }
     else{
         ctx.drawImage(character.second_frame, 50, character_height, 60, 60);
     }
-    ctx.fillRect(0, canvas.height - 20, canvas.width, 20)
+
+    let text_width = ctx.measureText(`${dev(game_iteration, 10)}`).width;
+    ctx.fillText(`${dev(game_iteration, 10)}`, canvas_width - (text_width / 2) - 30, 30);
+    ctx.fillRect(0, canvas.height - 20, canvas.width, 20);
     game_iteration++;
+    coldown--;
+}
+
+const death = () => {
+    jump = 1;
+    direction = 0;
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    death_process = setInterval(death_frame, 20); death_process;
+}
+
+const death_frame = () => {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    let character_height = usual_height - jump;
+
+    ctx.drawImage(character.first_frame, 50, character_height, 60, 60);
+    // Fall
+
+    if(jump > 0 && direction == 0 && character_height > usual_height - 100){
+        jump += 3.5;
+    }
+    else if(direction == 0 && character_height < usual_height - 100){
+        direction = 1;
+    }
+    else if(jump >= -100 && character_height < usual_height + 100){
+        jump -= 3.9;
+    }
+    else{
+        jump = 0;
+        obstacles = [];
+        removeEventListener("keydown", press_jump)
+        clearInterval(death_process);
+        start_menu();
+    }
+
+    // Obstacles    
+   obstacles.forEach((obstacle) => {
+        ctx.fillRect(obstacle, canvas.height - 80, -20, 60);
+    })
+
+    // Draw
+
+    let text_width = ctx.measureText(`${dev(game_iteration, 10)}`).width;
+    ctx.fillText(`${dev(game_iteration, 10)}`, canvas_width - (text_width / 2) - 30, 30);
+    ctx.fillRect(0, canvas.height - 20, canvas.width, 20);
 }

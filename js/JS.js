@@ -24,7 +24,3 @@ function sleep(ms) {
 function dev(x , y){
     return ((x - x % y) / y)
 }
-
-window.addEventListener("resize", () => {
-    location.reload();
-})

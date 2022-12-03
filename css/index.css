@@ -206,3 +206,9 @@ main {
   -webkit-backdrop-filter: blur(15px) saturate(0%);
           backdrop-filter: blur(15px) saturate(0%);
 }
+
+.about {
+  background-size: 100% 100%;
+  background-position: center;
+  background-image: url("../images/backgrounds/about.jpg");
+}
