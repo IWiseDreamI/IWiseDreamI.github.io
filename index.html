@@ -28,10 +28,25 @@
         <div class="home screen">
             <canvas id="canvas"></canvas>
         </div>
-        <div class="about screen"></div>
+        <div class="about screen">
+            <div class="about__content">
+                <h2>Hello <br> I'm Vinokurov Kamil, <br> Web fullstack-developer.</h2><br>
+                <p>Not only, but in general</p>
+                <svg viewBox="0 0 300 300" class="about__text-feature">
+                    <path id="curve" fill="transparent" d="M 120, 100 A 75, 100, 45, 0, 1, 220, 180 Z" />
+                    <text width="300" fill="rgba(255, 255, 255, 0.75)"><textPath xlink:href="#curve">I'd said that I'm really good in it.</textPath></text>
+                </svg>
+            </div>
+            <div class="about__interactive">
+
+            </div>
+        </div>
     </main>
     <script src="js/JS.js"></script>
     <script src="js/index.js"></script>
-    <script src="js/cat_game.js"></script>
+    <script src="js/Run_Jump.js"></script>
+    <script>
+        let Game = new Run_Jump("canvas");
+    </script>
 </body>
 </html>

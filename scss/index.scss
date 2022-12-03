@@ -66,7 +66,7 @@ nav{
 .nav__link::after{
     width: 0;
     content: "";
-    height: 0.2vh;
+    height: 0.3vh;
     display: block;
     transition: 0.5s;
     position: absolute;
@@ -90,7 +90,7 @@ nav{
 .nav__link-hover::after{
     width: 100%;
     content: "";
-    height: 0.2vh;
+    height: 0.3vh;
     display: block;
     transition: 0.5s;
     position: absolute;
@@ -149,12 +149,44 @@ main{
 #canvas{
     width: 50%;
     height: 50%;
+    filter: blur(1px);
     background-color: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(15px) saturate(0%);
 }
 
 .about{
+    width: 80%;
+    height: 80vh;
+    display: flex;
+    padding: 10vh 10%;
     background-size: 100% 100%;
     background-position: center;
     background-image: url("../images/backgrounds/about.jpg");
+}
+
+.about__content{
+    padding: 40px;
+    transition: 0.8s;
+    position: relative;
+    border-radius: 15px;
+    backdrop-filter: blur(2px);
+    color:rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+.about__content:hover{
+    filter: blur(1px);
+}
+
+
+.about__text-feature{
+    top: 0;
+    left: 0;
+    font-size: 10px;
+    position: absolute;
+    transform: translate(15%, -20%);
+}
+
+h1, h2, h3, h4, h5 , h6{
+    font-family: Nunito;
 }

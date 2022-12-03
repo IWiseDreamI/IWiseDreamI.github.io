@@ -96,7 +96,7 @@ nav {
 .nav__link::after {
   width: 0;
   content: "";
-  height: 0.2vh;
+  height: 0.3vh;
   display: block;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -123,7 +123,7 @@ nav {
 .nav__link-hover::after {
   width: 100%;
   content: "";
-  height: 0.2vh;
+  height: 0.3vh;
   display: block;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -202,13 +202,51 @@ main {
 #canvas {
   width: 50%;
   height: 50%;
+  -webkit-filter: blur(1px);
+          filter: blur(1px);
   background-color: rgba(0, 0, 0, 0.5);
   -webkit-backdrop-filter: blur(15px) saturate(0%);
           backdrop-filter: blur(15px) saturate(0%);
 }
 
 .about {
+  width: 80%;
+  height: 80vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10vh 10%;
   background-size: 100% 100%;
   background-position: center;
   background-image: url("../images/backgrounds/about.jpg");
+}
+
+.about__content {
+  padding: 40px;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+  position: relative;
+  border-radius: 15px;
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+  color: rgb(255, 255, 255);
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.about__content:hover {
+  -webkit-filter: blur(1px);
+          filter: blur(1px);
+}
+
+.about__text-feature {
+  top: 0;
+  left: 0;
+  font-size: 10px;
+  position: absolute;
+  -webkit-transform: translate(15%, -20%);
+          transform: translate(15%, -20%);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Nunito;
 }
