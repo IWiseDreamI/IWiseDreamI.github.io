@@ -17,6 +17,15 @@ function random(min = 0, max = 100) {
     return Math.round(rand);
 }
 
+function getCoords(object) {
+    let cords = object.getBoundingClientRect();
+    return {
+        top: cords.top + scrollY,
+        left: cords.left + scrollX
+    };
+  
+  }
+
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }

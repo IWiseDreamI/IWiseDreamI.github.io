@@ -1,0 +1,10 @@
+.roadmap {
+  width: 40vw;
+  height: 60vh;
+  overflow: hidden;
+  position: relative;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.75);
+  -webkit-backdrop-filter: blur(2px) saturate(500%);
+          backdrop-filter: blur(2px) saturate(500%);
+}

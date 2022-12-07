@@ -50,6 +50,7 @@ class Run_Jump{
         this.ctx.fillStyle = "#ffffff";
         this.ctx.font = "600 30px VT323"
         this.ctx.letterSpacing = "3px";
+        this.game_iteration = 0;
         this.ctx.fillText("Press \"Spacebar\" to start", this.canvas_width / 2, this.canvas.height / 2);
         this.text_flick = setInterval(this.textFlick, 1000); this.text_flick;
     }
@@ -174,10 +175,8 @@ class Run_Jump{
             this.jump = 0;
             this.obstacles = [];
             removeEventListener("keydown", this.press_jump)
-            clearInterval(this.death_process);
-            this.game_iteration = 0;     
+            clearInterval(this.death_process);     
             this.start_menu();
-            this.load();
         }
 
         // this.Obstacles    

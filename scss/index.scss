@@ -159,13 +159,16 @@ main{
     height: 80vh;
     display: flex;
     padding: 10vh 10%;
+    align-items: center;
     background-size: 100% 100%;
     background-position: center;
+    justify-content: space-around;
     background-image: url("../images/backgrounds/about.jpg");
 }
 
 .about__content{
     padding: 40px;
+    overflow: hidden;
     transition: 0.8s;
     position: relative;
     border-radius: 15px;
@@ -178,7 +181,6 @@ main{
     filter: blur(1px);
 }
 
-
 .about__text-feature{
     top: 0;
     left: 0;
@@ -189,4 +191,12 @@ main{
 
 h1, h2, h3, h4, h5 , h6{
     font-family: Nunito;
+}
+
+br{
+    user-select: none;
+}
+
+::selection{
+    background-color: rgba(0, 0, 0, 0.75);
 }
