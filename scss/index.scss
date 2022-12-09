@@ -189,14 +189,55 @@ main{
     transform: translate(15%, -20%);
 }
 
+.about__interactive{
+    width: 300px;
+    height: 100px;
+    padding: 5px;
+    transition: 0.8s;
+    position: relative;
+    border-radius: 50%;
+    backdrop-filter: blur(2px);
+    color:rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+.about__interactive-text{
+    position: absolute;
+}
+
+.about__interactive-text span{
+    left: 50%;
+    font-size: 32px;
+    font-weight: bold;
+    position: absolute;
+    display: inline-block;
+}
+
 h1, h2, h3, h4, h5 , h6{
     font-family: Nunito;
 }
-
+ 
 br{
     user-select: none;
 }
 
 ::selection{
     background-color: rgba(0, 0, 0, 0.75);
+}
+
+@keyframes rotate-0{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+@keyframes rotate-1{
+    from{
+        transform: rotate(360deg);
+    }
+    to{
+        transform: rotate(0deg);
+    }
 }

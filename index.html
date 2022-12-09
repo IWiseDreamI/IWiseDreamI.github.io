@@ -37,14 +37,22 @@
                     <text width="300" fill="rgba(255, 255, 255, 0.75)"><textPath xlink:href="#curve">I'd said that I'm really good in it.</textPath></text>
                 </svg>
             </div>
+            <div class="about__interactive">
+                <div class="about__interactive-text">I don't know what to put there.   </div>
+                <div class="about__interactive-text">So i just will write something.  </div>
+                <div class="about__interactive-text">I dont know what to say.   </div>
+                <div class="about__interactive-text">There's just some text.   </div>
+                <div class="about__interactive-text">Just for fun. </div>
+            </div>
         </div>
     </main>
     <script src="js/JS.js"></script>
     <script src="js/index.js"></script>
-    <script src="js/Run_Jump.js"></script>
+    <script src="js/run_jump.js"></script>
+    <script src="js/interactive_text.js"></script>
     <script>
-        const Game = new Run_Jump("canvas");
-        const X = new InteractiveMouse("interactive_space", "spotlight"); 
+        new Run_Jump("canvas");
+        new InteractiveText("about__interactive-text");
     </script>
 </body>
 </html>

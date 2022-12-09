@@ -254,22 +254,29 @@ main {
 }
 
 .about__interactive {
-  z-index: 1;
-  width: 40vw;
-  height: 60vh;
-  overflow: hidden;
+  width: 300px;
+  height: 100px;
+  padding: 5px;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
   position: relative;
-  border-radius: 20px;
+  border-radius: 50%;
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+  color: rgb(255, 255, 255);
   background-color: rgba(0, 0, 0, 0.75);
-  -webkit-backdrop-filter: blur(2px) saturate(500%);
-          backdrop-filter: blur(2px) saturate(500%);
 }
 
-#spotlight {
-  width: 100%;
-  height: 100%;
+.about__interactive-text {
   position: absolute;
-  background-image: radial-gradient(circle, transparent 160px, rgba(0, 0, 0, 0.85) 200px);
+}
+
+.about__interactive-text span {
+  left: 50%;
+  font-size: 32px;
+  font-weight: bold;
+  position: absolute;
+  display: inline-block;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -289,4 +296,46 @@ br {
 
 ::selection {
   background-color: rgba(0, 0, 0, 0.75);
+}
+
+@-webkit-keyframes rotate-0 {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate-0 {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes rotate-1 {
+  from {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  to {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+@keyframes rotate-1 {
+  from {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  to {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
 }

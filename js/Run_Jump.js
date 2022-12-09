@@ -149,7 +149,9 @@ class Run_Jump{
     }
 
     death = () => {
-        this.jump = 1;
+        if(this.jump < 1){
+            this.jump = 1;
+        }
         this.direction = 0;
         this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
         this.death_process = setInterval(this.death_frame, 20); this.death_process;
