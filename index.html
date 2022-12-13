@@ -38,21 +38,68 @@
                 </svg>
             </div>
             <div class="about__interactive">
-                <div class="about__interactive-text">I don't know what to put there.   </div>
-                <div class="about__interactive-text">So i just will write something.  </div>
+                <div class="about__interactive-text">I don't know what to put there. </div>
+                <div class="about__interactive-text">So i just will write something. </div>
                 <div class="about__interactive-text">I dont know what to say.   </div>
                 <div class="about__interactive-text">There's just some text.   </div>
                 <div class="about__interactive-text">Just for fun. </div>
+            </div>
+        </div>
+        <div class="technologies screen">
+            <img class="technology-image" src="./images/technologies/html5.svg" alt="HTML">
+            <div class="technology-content">
+                <h3>HTML</h3>
+            </div>
+            <img class="technology-image" src="./images/technologies/css3.svg" alt="CSS">
+            <div class="technology-content">
+                <h3>CSS</h3>
+            </div>
+            <img class="technology-image" src="./images/technologies/js.svg" alt="JavaScript">
+            <div class="technology-content">
+                <h3>JavaScript</h3>
+            </div>
+            <img class="technology-image" src="./images/technologies/figma.svg" alt="Figma">
+            <div class="technology-content">
+                <h3>Figma</h3>
+            </div>
+            <img class="technology-image" src="./images/technologies/node.svg" alt="Node JS">
+            <div class="technology-content">
+                <h3>Node JS</h3>
+            </div>
+            <img class="technology-image" src="./images/technologies/react.svg" alt="React">
+            <div class="technology-content">
+                <h3>React JS</h3>
+            </div>
+            <img class="technology-image" src="./images/technologies/python.svg" alt="SASS">
+            <div class="technology-content">
+                <h3>Python</h3>
+            </div>
+            <img class="technology-image" src="./images/technologies/cpp.svg" alt="Webpack">
+            <div class="technology-content">
+                <h3>C++</h3>
+            </div>
+            <img class="technology-image" src="./images/technologies/git.svg" alt="Git">
+            <div class="technology-content">
+                <h3>Git</h3>
+            </div>
+            <img class="technology-image" src="./images/technologies/webpack.svg" alt="Webpack">
+            <div class="technology-content">
+                <h3>Webpack</h3>
             </div>
         </div>
     </main>
     <script src="js/JS.js"></script>
     <script src="js/index.js"></script>
     <script src="js/run_jump.js"></script>
+    <script src="js/technologies.js"></script>
     <script src="js/interactive_text.js"></script>
     <script>
-        new Run_Jump("canvas");
-        new InteractiveText("about__interactive-text");
+        function Initialize(){
+            new Run_Jump("canvas");
+            new Technologies("technology-image", "technology-content");
+            new InteractiveText("about__interactive-text");
+        }
+        window.addEventListener("load", Initialize);
     </script>
 </body>
 </html>
