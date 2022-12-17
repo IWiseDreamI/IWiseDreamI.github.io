@@ -35,7 +35,7 @@ class Technologies{
     }
     activate(index){
         if(this.click_counter % 2 == 0){
-            let y = window.innerHeight / 4 + "px";
+            let y = window.innerHeight / 6 + "px";
             let x = window.innerWidth / 2 - this.objects[index].offsetWidth / 2 + "px";
             this.objects[index].style.top = y;
             this.objects[index].style.left = x;
